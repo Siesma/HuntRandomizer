@@ -1,6 +1,7 @@
 # HuntRandomizer
 
 This project is meant to be a functional randomizer for the game "Hunt:Showdown".
+The file "DataFile" is used for all the given objects. They are seperated by an "@". The following string indicates what type of object it is.
 
 # Command options #
 
