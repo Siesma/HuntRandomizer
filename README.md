@@ -6,13 +6,13 @@ This project is meant to be a functional randomizer for the game "Hunt:Showdown"
 
 Command | Action | Special usage
 | :--- | :--- | :---
-"generate" | generates a new loadout given a rule of conditions. |
-"won" | tells the randomizer that the previous round was succesfull and shall generate a new set of perks | "--won {aquired_perk_points}"
-"help" | previews some help regarding commands and or usages | "--help" will print general help; "--help rules" will print general help regarding rules; "--help "rule all" will print all currently active rules; "--help challenges" 
-"rule" | will create a new rule | "--rule {attribute, operation, operand}" creates a new rule with the given constraints. The condition affective value. All objects in the given file insist of attributes. The relative names there are the attribute. e.g. "rule tier > 2" will create a rule that states, that only items that have a tier of 3 or higher will be chosen. Possible operands are ">"; ">="; "<"; "<=", "="
-"exit" | exits the program
-"loss" | is identical to telling the generator to generate a new loadout. 
-"challenge" | choose a loadout out of a set of pre determined challenges. Those include bomberman {a loadout consisting of only explosive weaponry}
+generate | generates a new loadout given a rule of conditions. |
+won | tells the randomizer that the previous round was succesfull and shall generate a new set of perks | "--won {aquired_perk_points}"
+help | previews some help regarding commands and or usages | "--help" will print general help; "--help rules" will print general help regarding rules; "--help rule all" will print all currently active rules; "--help challenges" 
+rule | will create a new rule | "--rule {attribute, operation, operand}" creates a new rule with the given constraints. The condition affective value. All objects in the given file insist of attributes. The relative names there are the attribute. e.g. "rule tier > 2" will create a rule that states, that only items that have a tier of 3 or higher will be chosen. Possible operands are ">"; ">="; "<"; "<=", "="
+exit | exits the program
+loss | is identical to telling the generator to generate a new loadout. 
+challenge | choose a loadout out of a set of pre determined challenges. Those include bomberman {a loadout consisting of only explosive weaponry}
 
 # Additional info #
 
