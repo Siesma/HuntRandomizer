@@ -13,6 +13,7 @@ help | previews some help regarding commands and or usages | "--help" will print
 rule | will create a new rule | "--rule {attribute, operation, operand}" creates a new rule with the given constraints. The condition affective value. All objects in the given file insist of attributes. The relative names there are the attribute. e.g. "rule tier > 2" will create a rule that states, that only items that have a tier of 3 or higher will be chosen. Possible operands are ">"; ">="; "<"; "<=", "=". If only the attribute is invalid it will prombt you to reenter just the attribute. The operation and operand are saved. It will also print a list of possible attributes.
 exit | exits the program
 loss | is identical to telling the generator to generate a new loadout. 
+info | prints out some information. Can either print the data itself or counts the amount. Also affected by the ruleset. | "--info {attribute} {weapon}". The example command "info Support Tool" will print each Tool that has the respective attribute. For counting exists an attribute called "-count". e.g. "info -count Meleeable Weapon".
 challenge | choose a loadout out of a set of pre determined challenges. Those include bomberman {a loadout consisting of only explosive weaponry}
 
 # Additional info #
