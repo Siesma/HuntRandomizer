@@ -1,3 +1,11 @@
+# The uploaded files are not final and have some major bugs.
+Those include:
+The "generate" command hasnt been ported into a working state.
+The "rule" command has some problems initializing if the named attribute isnt probably called.
+The "AttributeObject" has a faulty compareTo function.
+And maybe some more.
+
+
 # HuntRandomizer
 
 This project is meant to be a functional randomizer for the game "Hunt:Showdown".
