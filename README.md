@@ -1,8 +1,13 @@
 # The uploaded files are not final and have some major bugs.
 Those include:
 The "generate" command hasnt been ported into a working state.
+
 The "rule" command has some problems initializing if the named attribute isnt probably called.
+
 The "AttributeObject" has a faulty compareTo function.
+
+The rule system is not fully implemented.
+
 And maybe some more.
 
 
