@@ -2,7 +2,7 @@
 Those include:
 The "generate" command hasnt been ported into a working state.
 
-The "rule" command has some problems initializing if the named attribute isnt probably called.
+The "rule" command has some problems initializing if the named attribute isnt properly called.
 
 The "AttributeObject" has a faulty compareTo function.
 
