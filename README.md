@@ -11,7 +11,7 @@ The file "DataFile" is used for all the given objects. They are seperated by an 
 Command | Action | Special usage
 | :--- | :--- | :---
 generate | generates a new loadout given a rule of conditions. |
-won | tells the randomizer that the previous round was succesfull and shall generate a new set of perks. Is also affected by rules. "rule Use_Type = "Support"" only generates perks that are of the support category. If the pool of useable perks is exhausted it will generate random perks regardless of the given rules. | "--won {aquired_perk_points}"
+won | tells the randomizer that the previous round was succesfull and shall generate a new set of perks. Is also affected by rules. "rule Use_Type = Support Perk" only generates perks that are of the support category. If the pool of useable perks is exhausted it will generate random perks regardless of the given rules. | "--won {aquired_perk_points}"
 help | previews some help regarding commands and or usages | "--help" will print general help; "--help rules" will print general help regarding rules; "--help .get rules" will print all currently active rules; "--help challenges" 
 rule | will create a new rule | "--rule {attribute, operation, operand, ObjectType}" creates a new rule with the given constraints. The condition affective value. All objects in the given file insist of attributes. The relative names there are the attribute. e.g. "rule tier > 2" will create a rule that states, that only items that have a tier of 3 or higher will be chosen. Possible operands are ">"; ">="; "<"; "<=", "=".The objecttype refers to all the possible Files (Weapons, Tools, etc)
 exit | exits the program
