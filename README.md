@@ -18,6 +18,7 @@ exit | exits the program
 loss | is identical to telling the generator to generate a new loadout. 
 info | prints out some information. Can either print the data itself or counts the amount. Also affected by the ruleset. | "--info {attribute} {ObjectType}". The example command "info Support Tool" will print each Tool that has the respective attribute. For counting exists an attribute called "-count". e.g. "info -count Meleeable Weapon".
 challenge | choose a loadout out of a set of pre determined challenges. Those include bomberman {a loadout consisting of only explosive weaponry}
+hunter | Will print information regarding your current hunter.
 
 # Additional info #
 
