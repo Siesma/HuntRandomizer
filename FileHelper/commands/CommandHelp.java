@@ -26,8 +26,12 @@ public class CommandHelp extends AbstractCommand {
                 try {
                     if (abstractCommand instanceof CommandRule && type[2].matches("( |\t|\n|)+rule( |\t|\n|)+")) {
                         System.out.println("---");
-                        System.out.print(((CommandRule) abstractCommand).getRules().isEmpty() ? "\tThere are no brooked rules\n" : "");
-                        ((CommandRule) abstractCommand).getRules().forEach(e -> System.out.println("\t" + e.toString()));
+                        try {
+                            System.out.print(((CommandRule) abstractCommand).getRules().isEmpty() ? "\tThere are no brooked rules\n" : "");
+                            ((CommandRule) abstractCommand).getRules().forEach(e -> System.out.println("\t" + e.toString()));
+                        } catch (Exception e) {
+                            System.out.println("\tThere were no rules found.");
+                        }
                         System.out.println("---");
                         return;
                     } else if (abstractCommand instanceof CommandChallenge && type[2].matches("( |\t|\n|)+challenge( |\t|\n|)+")) {
@@ -76,17 +80,27 @@ public class CommandHelp extends AbstractCommand {
                 AbstractCommand abstractCommand = commands.getCommand();
                 try {
                     if (abstractCommand instanceof CommandRule && type[2].equalsIgnoreCase("rule")) {
-                        System.out.println("\tThere are currently " + ((CommandRule) abstractCommand).getRules().size() + " rules active.");
+                        System.out.println("---");
+                        try {
+                            System.out.println("\tThere are currently " + ((CommandRule) abstractCommand).getRules().size() + " rules active.");
+                        } catch (Exception e) {
+                            System.out.println("\tThere are 0 rules active.");
+                        }
+                        System.out.println("---");
                         return;
                     } else if (abstractCommand instanceof CommandChallenge && type[2].equalsIgnoreCase("challenge")) {
+                        System.out.println("---");
                         System.out.println("\tThere are currently " + ((CommandChallenge) abstractCommand).getChallenges().size() + " challenges available.");
+                        System.out.println("---");
                         return;
                     } else if (abstractCommand instanceof CommandInfo && type[2].equalsIgnoreCase("info")) {
+                        System.out.println("---");
                         System.out.println("\tThere are currently " + (run.getFiltered_attributeObjects().size()) + " objects that can be chosen from.");
+                        System.out.println("---");
                         return;
                     }
                 } catch (Exception e) {
-                    error(this, "An unexpected error occurred\n" + (type.length == 1 ? "Not enough arguments provided" : ""));
+                    error(this, "An unexpected error occurred\n");
                     return;
                 }
             }

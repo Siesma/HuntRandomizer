@@ -35,6 +35,7 @@ public class Runnable {
                 try {
                     Commands nextCommand = Commands.valueOf(commands[0]);
                     String arguments = command.substring(commands[0].length());
+                    System.out.println("->");
                     nextCommand.getCommand().fire(this, arguments);
                 } catch (IllegalArgumentException e) {
                     System.err.println("The command \"" + commands[0] + "\" could not be found.");
@@ -53,6 +54,7 @@ public class Runnable {
 
 
     private void init() {
+        System.out.print("\n\n\n");
         System.out.println("Reinitializing object list (weapons, perks, tools, consumables)");
         this.unfiltered_attributeObjects = (new ImportHelper()).get(this, "DataFile");
         System.out.println("Initialize finalized. Proceed.");
@@ -104,10 +106,36 @@ public class Runnable {
                 }
             }
         }
-//        filtered_attributeObjects = output;
 
         setFiltered_attributeObjects(output);
         return this;
+    }
+
+    public void printHunter() {
+        if (currentHunter == null) {
+            System.out.println("There currently is no hunter generated. Generate one with \"generate\"");
+            return;
+        }
+        System.out.println("Your \"Tier " + currentHunter.getTier() + "\" hunter has the following attributes: ");
+        System.out.println("Weapon: " + currentHunter.getWeaponSlot1().hasGivenAttribute(ValueType.Name).getAttribute().getData() + (currentHunter.isPrimaryDual() ? "Dual-wield" : "") + (" " + currentHunter.getPrimaryCustomAmmo()));
+        System.out.println("Weapon: " + currentHunter.getWeaponSlot2().hasGivenAttribute(ValueType.Name).getAttribute().getData() + (currentHunter.isSecondaryDual() ? "Dual-wield" : "") + (" " + currentHunter.getSecondaryCustomAmmo()));
+        for (AttributeObject attributeObject : currentHunter.getFullList()) {
+            if (attributeObject == null)
+                continue;
+            AttributeIdentifier hasName = attributeObject.hasGivenAttribute(ValueType.Name);
+            if (!hasName.doesExist())
+                continue;
+            String[] splitted = attributeObject.getClass().toString().split("\\.");
+            if (splitted.length == 0)
+                System.out.println(hasName.getAttribute().toString());
+            else {
+                if (splitted[splitted.length - 1].equalsIgnoreCase("Weapon"))
+                    continue;
+                System.out.println(splitted[splitted.length - 1] + ": " + hasName.getAttribute().toString());
+            }
+        }
+
+
     }
 
     public void setFiltered_attributeObjects(ArrayList<AttributeObject> others) {
@@ -117,6 +145,10 @@ public class Runnable {
 
     public void updateHunter(Hunter currentHunter) {
         this.currentHunter = currentHunter;
+    }
+
+    public Hunter getCurrentHunter() {
+        return currentHunter;
     }
 
     public String addRule(Rule r) {

@@ -12,6 +12,7 @@ public class Hunter {
     private String tier;
     private boolean isPrimaryDual = false, isSecondaryDual = false;
     private String primaryCustomAmmo = "", secondaryCustomAmmo = "";
+    private ArrayList<Perk> perksLeft;
 
     public Hunter(String tier, Weapon[] weaponArray, Tool[] toolArray, Consumable[] consumableArray, Perk[] perkArray) {
         this.tier = tier;
@@ -23,6 +24,8 @@ public class Hunter {
         fullList.addAll(Arrays.asList((weaponArray)));
         fullList.addAll(Arrays.asList((toolArray)));
         fullList.addAll(Arrays.asList((consumableArray)));
+        if(perkArray == null)
+            return;
         fullList.addAll(Arrays.asList((perkArray)));
     }
 
@@ -107,6 +110,10 @@ public class Hunter {
         return this;
     }
 
+    public ArrayList<Perk> getPerksLeft () {
+        return perksLeft;
+    }
+
     public Consumable[] getConsumableArray() {
         return consumableArray;
     }
@@ -123,5 +130,13 @@ public class Hunter {
     public Hunter setPerkArray(Perk[] perkArray) {
         this.perkArray = perkArray;
         return this;
+    }
+
+    public void addPerks(ArrayList<Perk> currentPerks) {
+        this.perkArray = new Perk[currentPerks.size()];
+        for(int i = 0; i < perkArray.length; i++) {
+            perkArray[i] = currentPerks.get(i);
+        }
+        this.fullList.addAll(Arrays.asList(perkArray));
     }
 }

@@ -10,6 +10,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CommandGenerate extends AbstractCommand {
+    private final
+    // the logarithmic expression that delivers a probability of 25% to obtain four tools.
+    double twentyp = 0.707107;
+
+
     public CommandGenerate(String... args) {
         super(args);
     }
@@ -20,18 +25,15 @@ public class CommandGenerate extends AbstractCommand {
         int maxWeaponSlotSize = 4;
         int maxAmountOfTools = 4;
         int maxAmountOfConsumables = 4;
-        Weapon[] weapons = new Weapon[2];
+        Weapon[] weapons;
         Tool[] tools = new Tool[maxAmountOfTools];
-        Consumable[] consumables = new Consumable[4];
-        Perk[] perks = new Perk[3];
+        Consumable[] consumables;
 
         Hunter hunter;
-        String tier = "" + ((int) Math.random() * 3);
+        String tier = "" + ((int) (Math.random() * 3));
         System.out.println("You have to use your \"Tier " + tier + "\" hunter. Does the hunter has Quartermaster? Type \"yes\" or \"no\"");
         boolean quarter = new Scanner(System.in).nextLine().equalsIgnoreCase("yes");
         maxWeaponSlotSize += quarter ? 1 : 0;
-
-        double one_over = 1d / run.getFiltered_attributeObjects().size();
 
         ArrayList<Weapon> weaponArrayList = new ArrayList<>();
         ArrayList<Tool> toolArrayList = new ArrayList<>();
@@ -132,8 +134,8 @@ public class CommandGenerate extends AbstractCommand {
         String primaryAmmo = "", secondaryAmmo = "";
 
         String ruleStatingAmmo = "";
-        for(Rule r : run.getRules()) {
-            if(r.getAttribute().equalsIgnoreCase("Custom_Ammo")) {
+        for (Rule r : run.getRules()) {
+            if (r.getAttribute().equalsIgnoreCase("Custom_Ammo")) {
                 ruleStatingAmmo = r.getOperand();
             }
         }
@@ -158,7 +160,6 @@ public class CommandGenerate extends AbstractCommand {
         /**
          Start section for consumables
          */
-
         Consumable[] consumableHelperArray = new Consumable[maxAmountOfConsumables];
         for (int i = 0; i < consumableHelperArray.length; i++) {
             if (consumableArrayList.isEmpty()) {
@@ -167,7 +168,7 @@ public class CommandGenerate extends AbstractCommand {
                 }
                 break;
             }
-            if (shouldApply(0.5)) {
+            if (!shouldApply(Math.pow(twentyp, i))) {
                 for (int j = i; j < consumableHelperArray.length; j++) {
                     consumableHelperArray[j] = new Consumable(new Attribute("Name", "None"));
                 }
@@ -202,81 +203,74 @@ public class CommandGenerate extends AbstractCommand {
             }
         }
         boolean hasToolMelee = false;
+
+
         if (!hasMeleeWeapon) {
             tools[0] = tooMeleelList.get((int) (Math.random() * tooMeleelList.size()));
-            if (tools[0].hasGivenAttribute(ValueType.Meleeable).getAttribute().getData().equalsIgnoreCase("True"))
-                hasToolMelee = true;
+            hasToolMelee = true;
         }
+
         Tool med_kit = null;
-        if (healthItems <= 2) {
-            for (Tool t : toolArrayList) {
-                AttributeIdentifier toolName = t.hasGivenAttribute(ValueType.Name);
-                if (toolName.doesExist()) {
-                    if (toolName.getAttribute().getData().equalsIgnoreCase("First Aid Kit")) {
-                        med_kit = t;
-                        break;
-                    }
-                }
+        for (Tool tool : toolArrayList) {
+            AttributeIdentifier hasName = tool.hasGivenAttribute(ValueType.Name);
+            if (!hasName.doesExist()) {
+                continue;
             }
-            tools[3] = med_kit == null ? new Tool(new Attribute("Name", "First Aid Kit")) : med_kit;
+            if (hasName.getAttribute().getData().equalsIgnoreCase("First Aid Kit")) {
+                med_kit = tool;
+                toolArrayList.remove(med_kit);
+                break;
+            }
+        }
+
+        if (med_kit == null) {
+            med_kit = new Tool(new Attribute("Name", "First Aid Kit"), new Attribute("Cost", "30"), new Attribute("Use_Type", "Tool, Support"));
+        }
+
+        if (healthItems <= 3) {
+            tools[3] = med_kit;
             maxAmountOfTools--;
         }
 
+        int beginIndex = hasToolMelee ? 1 : 0;
 
-        for (int i = hasToolMelee ? 1 : 0; i < maxAmountOfTools - 1; i++) {
+        for (int i = beginIndex; i < maxAmountOfTools; i++) {
+            // failsafe; no possible tools can be generated -> fill with nothing
             if (toolArrayList.isEmpty()) {
                 for (int j = i; j < maxAmountOfTools - 1; j++) {
                     tools[j] = new Tool(new Attribute("Name", "None"));
                 }
                 break;
             }
-            if (shouldApply(0.5)) {
-                for (int j = i; j < tools.length; j++) {
+
+            if (!shouldApply(Math.pow(twentyp, i))) {
+                for (int j = i; j < tools.length; j++)
                     tools[j] = new Tool(new Attribute("Name", "None"));
-                }
+
                 break;
             }
-            Tool addition = toolArrayList.get((int) (Math.random() * toolArrayList.size()));
-            toolArrayList.remove(addition);
-            tools[i] = addition;
+            Tool nT = toolArrayList.get((int) (Math.random() * toolArrayList.size()));
+            toolArrayList.remove(nT);
+            tools[i] = nT;
+
         }
 
+        if(!tools[3].hasGivenAttribute(ValueType.Name).getAttribute().getData().equalsIgnoreCase("First Aid Kit") && healthItems <= 3) {
+            tools[3] = med_kit;
+        }
 
-        hunter = new Hunter(tier, weapons, tools, consumables, perks);
+        hunter = new Hunter(tier, weapons, tools, consumables, null);
         hunter.updateWeaponDual(updatePrimaryToDual, updateSecondaryToDual);
         hunter.applyCustomAmmo(primaryAmmo, secondaryAmmo);
         run.updateHunter(hunter);
 
-        printHunter(hunter);
+        run.printHunter();
 
     }
 
-
-    void printHunter(Hunter hunter) {
-        System.out.println("Your \"Tier " + hunter.getTier() + "\" hunter has the following attributes: ");
-        System.out.println("Weapon: " + hunter.getWeaponSlot1().hasGivenAttribute(ValueType.Name).getAttribute().getData() + (hunter.isPrimaryDual() ? "Dual-wield" : "") + (" " + hunter.getPrimaryCustomAmmo()));
-        System.out.println("Weapon: " + hunter.getWeaponSlot2().hasGivenAttribute(ValueType.Name).getAttribute().getData() + (hunter.isSecondaryDual() ? "Dual-wield" : "") + (" " + hunter.getSecondaryCustomAmmo()));
-        for (AttributeObject attributeObject : hunter.getFullList()) {
-            if (attributeObject == null)
-                continue;
-            AttributeIdentifier hasName = attributeObject.hasGivenAttribute(ValueType.Name);
-            if (!hasName.doesExist())
-                continue;
-            String[] splitted = attributeObject.getClass().toString().split("\\.");
-            if (splitted.length == 0)
-                System.out.println(hasName.getAttribute().toString());
-            else {
-                if (splitted[splitted.length - 1].equalsIgnoreCase("Weapon"))
-                    continue;
-                System.out.println(splitted[splitted.length - 1] + ": " + hasName.getAttribute().toString());
-            }
-        }
-
-
-    }
 
     private boolean shouldApply(double in) {
-        return Math.random() > in;
+        return Math.random() < in;
     }
 
     @Override

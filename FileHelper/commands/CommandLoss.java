@@ -12,6 +12,7 @@ public class CommandLoss extends AbstractCommand {
     public void fire(Runnable run, String arguments) {
         String[] type = arguments.split(" ");
         this.run = run;
+        new CommandGenerate().fire(run, "");
     }
 
     @Override

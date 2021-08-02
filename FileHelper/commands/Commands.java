@@ -28,7 +28,8 @@ public enum Commands {
     ),
     challenge(new CommandChallenge(),
             new InformationData("\"challenge\"", "Generates a new challenge run. Those have a pre determined set of rules that cannot be altered.")
-    );
+    ),
+    hunter(new CommandHunter(), new InformationData("\"hunter\"", "reports information about the current hunter."));
 
     InformationData[] s;
     AbstractCommand command;
