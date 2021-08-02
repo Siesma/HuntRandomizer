@@ -6,7 +6,7 @@ public enum ValueType {
 
     Name(new InformationData("Name", "")),
     Cost(new InformationData("Cost", "")),
-    SlotSize(new InformationData("Slot_Size", "")),
+    Slot_Size(new InformationData("Slot_Size", "")),
     Unlock(new InformationData("Unlock", "")),
     Damage(new InformationData("Damage", "")),
     Weapon_Family(new InformationData("Category", ""), new InformationData("Weapon_Family", "")),
