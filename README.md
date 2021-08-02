@@ -33,7 +33,7 @@ Attribute | value | usage
 | :--- | :--- | :---
 Name | Name of the weapon | String
 Cost | Cost of the weapon | Integer (+ "$") 
-Slot_Size | Slotsize of the weapon | Integer
+SlotSize | Slotsize of the weapon | Integer
 Unlock | Needed rank to unlock the weapon | ("Rank" +) Integer
 Damage | Damage of the weapon | Integer
 Weapon_Family | weapon family of the weapon | String
