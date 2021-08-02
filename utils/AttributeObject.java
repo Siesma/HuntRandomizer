@@ -58,6 +58,9 @@ public abstract class AttributeObject {
         String ruleOperand = r.getOperand();
         String compareValue = ruleAttrib.getData();
 
+        if(compareValue.equalsIgnoreCase(""))
+            return false;
+
         String ruleApplicableType = r.getApplicableType();
         String[] splittedClassString = this.getClass().toString().split("\\.");
 

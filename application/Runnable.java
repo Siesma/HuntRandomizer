@@ -3,7 +3,6 @@ package application;
 import FileHelper.ImportHelper;
 import FileHelper.ValueType;
 import FileHelper.attribute.AttributeIdentifier;
-import FileHelper.commands.CommandRule;
 import FileHelper.commands.Commands;
 import FileHelper.commands.Rule;
 import FileHelper.data.InformationData;
@@ -22,41 +21,39 @@ public class Runnable {
     private Hunter currentHunter;
 
     public Runnable(String parameter) {
-        if (parameter.equalsIgnoreCase("TestingGround")) {
-            init();
-            rules.add(new Rule("Custom_Ammo", CommandRule.operationTypes.Contains, "Dragon Breath", "Weapon"));
-        } else {
-            init();
-            Scanner sc = new Scanner(System.in);
-            while (true) {
-                String command = sc.nextLine();
-                String[] commands = command.split(" ");
 
-                try {
-                    Commands nextCommand = Commands.valueOf(commands[0]);
-                    String arguments = command.substring(commands[0].length());
-                    System.out.println("->");
-                    nextCommand.getCommand().fire(this, arguments);
-                } catch (IllegalArgumentException e) {
-                    System.err.println("The command \"" + commands[0] + "\" could not be found.");
-                    System.err.println("A list of all possible commands: ");
-                    for (Commands cmd : Commands.values()) {
-                        for (InformationData informationData : cmd.getData()) {
-                            System.out.println("\"" + informationData.getInformation() + "\" \t" + informationData.getData());
-                        }
-                    }
-                }
+        init(parameter);
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            String command = sc.nextLine();
+            String[] commands = command.split(" ");
+
+//            try {
+                Commands nextCommand = Commands.valueOf(commands[0]);
+                String arguments = command.substring(commands[0].length());
+                System.out.println("->");
+                nextCommand.getCommand().fire(this, arguments);
+//            } catch (IllegalArgumentException e) {
+//                System.err.println("The command \"" + commands[0] + "\" could not be found.");
+//                System.err.println("A list of all possible commands: ");
+//                for (Commands cmd : Commands.values()) {
+//                    for (InformationData informationData : cmd.getData()) {
+//                        System.out.println("\"" + informationData.getInformation() + "\" \t" + informationData.getData());
+//                    }
+//                }
+//            }
 
 
-            }
         }
+
+
     }
 
 
-    private void init() {
+    private void init(String fileName) {
         System.out.print("\n\n\n");
         System.out.println("Reinitializing object list (weapons, perks, tools, consumables)");
-        this.unfiltered_attributeObjects = (new ImportHelper()).get(this, "DataFile");
+        this.unfiltered_attributeObjects = (new ImportHelper()).get(this, fileName);
         System.out.println("Initialize finalized. Proceed.");
     }
 
