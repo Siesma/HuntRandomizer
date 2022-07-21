@@ -4,6 +4,7 @@ import FileHelper.ValueType;
 import FileHelper.attribute.Attribute;
 import FileHelper.attribute.AttributeIdentifier;
 import FileHelper.commands.CommandRule;
+import FileHelper.commands.Rule;
 import FileHelper.data.InformationData;
 
 import java.util.ArrayList;
@@ -11,89 +12,110 @@ import java.util.Arrays;
 
 public abstract class AttributeObject {
 
-    protected ArrayList<Attribute> attributes;
+  protected ArrayList<Attribute> attributes;
 
-    public AttributeObject(Attribute... attributes) {
-        this.attributes = new ArrayList<Attribute>(Arrays.asList(attributes));
+  public AttributeObject(Attribute... attributes) {
+    this.attributes = new ArrayList<Attribute>(Arrays.asList(attributes));
+  }
+
+  public AttributeIdentifier hasGivenAttribute(ValueType valueType) {
+    for (Attribute attribute : attributes)
+      for (InformationData ida : valueType.getIdentifier()) {
+        String s = ida.getInformation();
+        if (attribute.getLookup().equalsIgnoreCase(s))
+          return new AttributeIdentifier(true, attribute);
+      }
+    return new AttributeIdentifier(false, null);
+  }
+
+  public ArrayList<Attribute> getAttributes() {
+    return attributes;
+  }
+
+  public void addAttribute(Attribute attribute) {
+    attributes.add(attribute);
+  }
+
+  @Override
+  public String toString() {
+    AttributeIdentifier attributeIdentifier = this.hasGivenAttribute(ValueType.Name);
+    if (attributeIdentifier.doesExist()) {
+      StringBuilder out = new StringBuilder();
+
+
+      attributes.forEach(e -> out.append(e.getLookup()).append(" \"").append(e.getData().replace("\n", "").replace("\t", "")).append("\", "));
+
+      return out.toString();
+    } else
+      return attributeIdentifier.doesExist() ? attributeIdentifier.toString() : "Generic Weapon with " + this.attributes.size() + " attributes";
+  }
+
+  public boolean compareTo(Rule r) {
+    Attribute ruleAttrib = r.getAttribute(this);
+    if (ruleAttrib == null)
+      return false;
+    CommandRule.operationTypes ruleOperation = r.getOperation();
+    String ruleOperand = r.getOperand();
+    String compareValue = ruleAttrib.getData();
+
+    if (compareValue.equalsIgnoreCase(""))
+      return false;
+
+    String ruleApplicableType = r.getApplicableType();
+    String[] splittedClassString = this.getClass().toString().split("\\.");
+
+    if (!(splittedClassString[splittedClassString.length - 1].equalsIgnoreCase(ruleApplicableType)) && !ruleApplicableType.equalsIgnoreCase("all")) {
+      return true;
     }
 
-    public AttributeIdentifier hasGivenAttribute(ValueType valueType) {
-        for (Attribute attribute : attributes)
-            for (InformationData ida : valueType.getIdentifier()) {
-                String s = ida.getInformation();
-                if (attribute.getLookup().equalsIgnoreCase(s))
-                    return new AttributeIdentifier(true, attribute);
-            }
-        return new AttributeIdentifier(false, null);
-    }
-
-    public ArrayList<Attribute> getAttributes() {
-        return attributes;
-    }
-
-    public void addAttribute(Attribute attribute) {
-        attributes.add(attribute);
-    }
-
-    @Override
-    public String toString() {
-        AttributeIdentifier attributeIdentifier = this.hasGivenAttribute(ValueType.Name);
-        if (attributeIdentifier.doesExist()) {
-            StringBuilder out = new StringBuilder();
-
-
-            attributes.forEach(e -> out.append(e.getLookup()).append(" ").append(e.getData().replace("\n", "").replace("\t", "")));
-
-            return out.toString();
-        } else
-            return attributeIdentifier.doesExist() ? attributeIdentifier.toString() : "Generic Weapon with " + this.attributes.size() + " attributes";
-    }
-
-    public boolean compareTo(Attribute attribute, CommandRule.operationTypes operationType, String value) {
-        String kindOf = "";
-        String regexForInteger = "([0-9])+.*";
-        String regexForString = "([a-z]|[A-Z])+";
-        String regexForSet = "(([a-z]|[A-Z])+(,|))+";
-
-        if (attribute.getData().matches(regexForInteger)) {
-            kindOf = "Integer";
-        } else if (attribute.getData().matches(regexForString)) {
-            kindOf = "String";
-        } else if (attribute.getData().matches(regexForSet)) {
-            kindOf = "Set";
+    switch (ValueType.valueOf(ruleAttrib.getLookup()).getRuleType()) {
+      case String:
+        switch (ruleOperation) {
+          case Contains:
+            return compareValue.contains(ruleOperand);
+          case Equal:
+            return compareValue.equalsIgnoreCase(ruleOperand);
+          case Unequal:
+            return !compareValue.equalsIgnoreCase(ruleOperand);
+          default:
+            return false;
         }
-
-        switch (kindOf) {
-            case "Integer":
-                String subset = attribute.getData().replaceAll("[^0-9.]", "");
-                int subsetValue = Integer.parseInt(subset);
-                return subsetValue > Integer.parseInt(value);
-            case "String":
-                if(!(operationType == CommandRule.operationTypes.Equal || operationType == CommandRule.operationTypes.Unequal)) {
-                    return false;
-                }
-                if(operationType == CommandRule.operationTypes.Equal) {
-                    return value.equalsIgnoreCase(attribute.getData());
-                } else {
-                    return !value.equalsIgnoreCase(attribute.getData());
-                }
-
-            case "Set":
-                if (operationType != CommandRule.operationTypes.Equal)
-                    return false;
-                for(String s : attribute.getData().split(",")) {
-                    if(s.equalsIgnoreCase(value)) {
-                        attribute.setData(value);
-                        return true;
-                    }
-                }
-                break;
-            default:
-                System.err.println("Some unexpected error happened");
-                break;
+      case Set:
+        switch (ruleOperation) {
+          case Contains:
+            return compareValue.contains(ruleOperand);
+          default:
+            return false;
         }
-
-
-        return false;
+      case Integer:
+        switch (ruleOperation) {
+          case Equal:
+            return Integer.parseInt(compareValue.replaceAll("[^0-9]", "")) == Integer.parseInt(ruleOperand.replaceAll("[^0-9]", ""));
+          case Unequal:
+            return Integer.parseInt(compareValue.replaceAll("[^0-9]", "")) != Integer.parseInt(ruleOperand.replaceAll("[^0-9]", ""));
+          case Greater:
+            return Integer.parseInt(compareValue.replaceAll("[^0-9]", "")) > Integer.parseInt(ruleOperand.replaceAll("[^0-9]", ""));
+          case Lower:
+            return Integer.parseInt(compareValue.replaceAll("[^0-9]", "")) < Integer.parseInt(ruleOperand.replaceAll("[^0-9]", ""));
+          case GreaterNEqual:
+            return Integer.parseInt(compareValue.replaceAll("[^0-9]", "")) >= Integer.parseInt(ruleOperand.replaceAll("[^0-9]", ""));
+          case LowerNEqual:
+            return Integer.parseInt(compareValue.replaceAll("[^0-9]", "")) <= Integer.parseInt(ruleOperand.replaceAll("[^0-9]", ""));
+          default:
+            return false;
+        }
+      case Boolean:
+        switch (ruleOperation) {
+          case Equal:
+            return Boolean.parseBoolean(compareValue) == Boolean.parseBoolean(ruleOperand);
+          case Unequal:
+            return Boolean.parseBoolean(compareValue) != Boolean.parseBoolean(ruleOperand);
+          default:
+            return false;
+        }
     }
+    return false;
+  }
+
+
 }

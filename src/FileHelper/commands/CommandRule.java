@@ -3,8 +3,6 @@ package FileHelper.commands;
 import application.Runnable;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.stream.Stream;
 
 public class CommandRule extends AbstractCommand {
 
@@ -16,50 +14,88 @@ public class CommandRule extends AbstractCommand {
      * Those are based on the following:
      * rule {attribute, operation, operand}
      * "attribute" refers to the attribute that is checked against.
-     * "operation" refers to the logic operations (>, <, >=, <=, = | "==" is treated equally to "=")
-     * "operand" refers to the checked value. String operations only have an equality operation.
+     * "operation" refers to the logic operations (>, <, >=, <=, =, !, "==" is treated equally to "=") or the implicit operator \"~\" which means \"Contains\".
+     * "operand" refers to the checked value. String operations only have the equality operations and the contains operation.
      */
     public CommandRule(String... args) {
         super(args);
     }
 
+
     @Override
-    public void fire(Runnable run, String arguments) {
+    public void updateInformationData() {
+        ArrayList<ArrayList<String>> list = new ArrayList<ArrayList<String>>();
+        ArrayList<String> rules = new ArrayList<>();
+        if (run == null ||
+          run.getRules() == null)
+            return;
+        run.getRules().forEach(e -> rules.add(e.toString()));
+        list.add(rules);
+        setInformationLists(list);
+    }
+
+    @Override
+    public void setInformationLists(ArrayList list) {
+        super.setInformationLists(list);
+    }
+
+    @Override
+    public void fire(Runnable run, String arguments, boolean suppress) {
         String[] type = arguments.split(" ");
 
         this.run = run;
-        /*
-        rule tier > 3
-         */
+        String[] newType = new String[type.length - 1];
+        System.arraycopy(type, 1, newType, 0, type.length - 1);
+        type = newType;
 
-        if (type.length <= 3) {
-            error(this, "Not enough arguments. 3 arguments were expected but only " + getArgs().length + " were provided.");
+        if (type.length == 0) {
+            Commands.help.getCommand().fire(run, " rule", false);
+            return;
+        }
+        if (!type[0].equalsIgnoreCase("-clear") && type.length <= 1) {
+            error(this, "Not enough arguments. 3 arguments were expected but only " + type.length + " were provided.");
+            return;
+        }
+
+        if (type[0].equalsIgnoreCase("-clear")) {
+            run.printInformation("All rules have been removed");
+            run.getRules().clear();
+            run.adjustFilteredList();
+            return;
+        }
+
+        if (type.length <= 2) {
+            error(this, "Not enough arguments. 3 or 4 arguments were expected but only " + type.length + " were provided.");
             return;
         }
 
         if (type.length >= 5) {
-            error(this, "Too many arguments. 3 arguments were expected but " + getArgs().length + " were provided.");
+            error(this, "Too many arguments. 3 or 4 arguments were expected but " + type.length + " were provided.");
             return;
         }
-        String[] newType = new String[type.length - 1];
-        System.arraycopy(type, 1, newType, 0, type.length - 1);
-        type = newType;
-        if(operationTypes.getType(type[1]) == null) {
+        String applicableType = "all";
+        try {
+            applicableType = type[3];
+        } catch (ArrayIndexOutOfBoundsException ignored) {
+        }
+        if (operationTypes.getType(type[1]) == null) {
             System.out.println("The operation \"" + type[1] + "\" could not be found.");
             return;
         }
-        Rule r = new Rule(type[0], operationTypes.getType(type[1]), type[2]);
-
-        run.getRules().add(r);
+        Rule r = new Rule(type[0], operationTypes.getType(type[1]), type[2].replaceAll("_", " "), applicableType);
+        if (suppress) {
+            run.addRule(r);
+            run.adjustFilteredList();
+            return;
+        }
+        run.printInformation(run.addRule(r));
         run.adjustFilteredList();
-        System.out.println("---");
-        System.out.println("\t The rule \"" + r + "\" has been added.");
-        System.out.println("---");
+        this.updateInformationData();
 
     }
 
     public enum operationTypes {
-        Greater(">"), Lower("<"), Equal("=", "=="), GreaterNEqual(">="), LowerNEqual("<="), Unequal("!", "!=");
+        Greater(">"), Lower("<"), Equal("=", "=="), GreaterNEqual(">="), LowerNEqual("<="), Unequal("!", "!="), Contains("~");
         String[] data;
 
         operationTypes(String... data) {
@@ -94,9 +130,10 @@ public class CommandRule extends AbstractCommand {
         StringBuilder out = new StringBuilder();
         out.append("---\n");
         out.append("\tUsage: \n");
+        out.append("\t\"rule -clear resets the rules.\" \n");
         out.append("\t\"rule {attribute, operation, operand}\" \n");
         out.append("\t\"attribute\" refers to the attribute that is checked against. \n");
-        out.append("\t\"operation\" refers to the logic operations (>, <, >=, <=, =, !). \n");
+        out.append("\t\"operation\" refers to the logic operations (>, <, >=, <=, =, !) or the implicit operator \"~\" which means \"Contains\". \n");
         out.append("\t\"operand\" refers to the checked value. String operations only have an equality operation. \n");
         out.append("---\n");
 

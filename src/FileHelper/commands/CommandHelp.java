@@ -1,98 +1,37 @@
 package FileHelper.commands;
 
-import FileHelper.ValueType;
 import FileHelper.data.InformationData;
 import application.Runnable;
-import utils.AttributeObject;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Locale;
 
 public class CommandHelp extends AbstractCommand {
 
+
+    @Override
+    public void updateInformationData() {
+        ArrayList<String> list = new ArrayList<>();
+        setInformationLists(list);
+    }
+
+    @Override
+    public void setInformationLists(ArrayList list) {
+        super.setInformationLists(list);
+    }
 
     public CommandHelp(String... args) {
         super(args);
     }
 
     @Override
-    public void fire(Runnable run, String arguments) {
+    public void fire(Runnable run, String arguments, boolean suppress) {
         String[] type = arguments.split(" ");
         if (type.length == 0 || (type.length == 1 && type[0].equalsIgnoreCase(""))) {
             System.out.println(getHelp(type));
             return;
         }
-        String[] argumentTypes = run.getObjectIdentifier();
-        if (type[1].equalsIgnoreCase("-get")) {
-            for (Commands commands : Commands.values()) {
-                AbstractCommand abstractCommand = commands.getCommand();
-                try {
-                    if (abstractCommand instanceof CommandRule && type[2].matches("( |\t|\n|)+rule( |\t|\n|)+")) {
-                        System.out.println("---");
-                        System.out.print(((CommandRule) abstractCommand).getRules().isEmpty() ? "There are no brooked rules\n" : "");
-                        ((CommandRule) abstractCommand).getRules().forEach(e -> System.out.println("\t" + e.toString()));
-                        System.out.println("---");
-                        return;
-                    } else if (abstractCommand instanceof CommandChallenge && type[2].matches("( |\t|\n|)+challenge( |\t|\n|)+")) {
-                        System.out.println("---");
-                        ((CommandChallenge) abstractCommand).getChallenges().forEach(e -> System.out.println("\t" + e.toString()));
-                        System.out.print(((CommandChallenge) abstractCommand).getChallenges().isEmpty() ? "There are no brooked rules\n" : "");
-                        System.out.println("---");
-                        return;
-                    }
-                } catch (Exception e) {
-                    error(this, "An unexpected error occured\n" + (type.length == 1 ? "Not enough arguments provided" : ""));
-                    return;
-                }
-            }
-            if (type[2].equalsIgnoreCase("attribute") || type[2].equalsIgnoreCase("attributes")) {
-                System.out.println("---");
-                for(ValueType valueType : ValueType.values()) {
-                    for(InformationData informationData : valueType.getIdentifier()) {
-                        System.out.println("\t" + informationData.getInformation());
-                    }
-                }
-                System.out.println("---");
-            } else {
-                for (AttributeObject attributeObject : run.getUnfiltered_attributeObjects()) {
-                    boolean hasName = attributeObject.hasGivenAttribute(ValueType.Name).doesExist();
-                    if (!hasName) {
-                        System.out.println("\t" + attributeObject);
-                        continue;
-                    }
-                    String name = attributeObject.hasGivenAttribute(ValueType.Name).getAttribute().toString();
-                    for (String str : argumentTypes) {
-                        if (attributeObject.getClass().toString().endsWith(str) && (type[2].equalsIgnoreCase(str) || type[2].equalsIgnoreCase(str + "s"))) {
-                            System.out.println("\t" + name);
-                        }
-                    }
-                }
-            }
-        } else if (type[1].equalsIgnoreCase("-count")) {
-            for (Commands commands : Commands.values()) {
-                AbstractCommand abstractCommand = commands.getCommand();
-                try {
-                    if (abstractCommand instanceof CommandRule && type[2].equalsIgnoreCase("rule")) {
-                        System.out.println("There are currently " + ((CommandRule) abstractCommand).getRules().size() + " rules active.");
-                        return;
-                    } else if (abstractCommand instanceof CommandChallenge && type[2].equalsIgnoreCase("challenge")) {
-                        System.out.println("There are currently " + ((CommandChallenge) abstractCommand).getChallenges().size() + " challenges available.");
-                        return;
-                    }
-                } catch (Exception e) {
-                    error(this, "An unexpected error occurred\n" + (type.length == 1 ? "Not enough arguments provided" : ""));
-                    return;
-                }
-            }
-            int count = 0;
-            for (AttributeObject attributeObject : run.getUnfiltered_attributeObjects()) {
-                for (String str : argumentTypes) {
-                    if (attributeObject.getClass().toString().endsWith(str) && (type[2].equalsIgnoreCase(str) || type[2].equalsIgnoreCase(str + "s"))) {
-                        count++;
-                    }
-                }
-            }
-            System.out.println("There currently are " + count + " active " + type[2] + (count > 1 ? "s" : ""));
-        } else {
+        if (type.length == 2) {
             String command = type[1];
             AbstractCommand abstractCommand = null;
             for (Commands commands : Commands.values()) {
@@ -104,13 +43,19 @@ public class CommandHelp extends AbstractCommand {
                 }
             }
             if (abstractCommand == null) {
-                (new CommandHelp()).fire(run, "");
+                (new CommandHelp()).fire(run, "", false);
                 return;
             }
             System.out.println(abstractCommand.getHelp(type));
+            return;
         }
-
-
+        AbstractCommand currentCommand = Commands.valueOf(type[2].toLowerCase(Locale.ROOT)).getCommand();
+        if (type[1].equalsIgnoreCase("-get")) {
+            currentCommand.getInformationLists().forEach(list -> list.forEach(element -> System.out.println("\t" + element)));
+        } else if (type[1].equalsIgnoreCase("-count")) {
+            int size = currentCommand.getInformationLists().stream().mapToInt(ArrayList::size).sum();
+            System.out.println("\tThere are currently " + size + " active modifiers");
+        }
     }
 
     @Override

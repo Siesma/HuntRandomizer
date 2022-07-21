@@ -1,18 +1,15 @@
-import FileHelper.commands.Commands;
 import application.Runnable;
-import utils.AttributeObject;
-
-import java.util.ArrayList;
 
 public class Handler {
 
-    private ArrayList<AttributeObject> attributeObjects = new ArrayList<>();
-
-    public static void main(String[] args) {
-
-        Runnable run = new Runnable();
-
-
-
+  public static void main(String[] args) {
+    if (args == null || args.length == 0) {
+      args = new String[1];
+      args[0] = "DataFile";
     }
+    System.out.println("Trying to load the file \"" + args[0] + "\"");
+    Runnable run = new Runnable();
+    run.start(args[0]);
+  }
+
 }

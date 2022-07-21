@@ -2,9 +2,17 @@ package FileHelper.data;
 
 public class InformationData {
     private String information, data;
-    public InformationData (String information, String data) {
+    private InformationData other;
+
+    public InformationData(String information, String data) {
         this.information = information;
         this.data = data;
+    }
+
+    public InformationData(String information, InformationData other) {
+        this.information = information;
+        this.data = other.toString();
+        this.other = other;
     }
 
     public String getInformation() {
@@ -24,5 +32,17 @@ public class InformationData {
         this.data = data;
         return this;
     }
+
+    public InformationData getOther() {
+        return other;
+    }
+
+
+    @Override
+    public String toString() {
+        return getInformation() + ": \"" + getData() + "\"";
+    }
+
+
 }
 

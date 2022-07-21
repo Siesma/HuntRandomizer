@@ -1,118 +1,285 @@
 package FileHelper.commands;
 
 import FileHelper.ValueType;
+import FileHelper.attribute.Attribute;
+import FileHelper.attribute.AttributeIdentifier;
 import application.Runnable;
 import utils.*;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class CommandGenerate extends AbstractCommand {
+    private final
+    // the logarithmic expression that delivers a probability of 25% to obtain four tools.
+    double twentyp = 0.707107;
+
+
+    @Override
+    public void updateInformationData() {
+        ArrayList list = new ArrayList();
+        setInformationLists(list);
+    }
+
+    @Override
+    public void setInformationLists(ArrayList list) {
+        super.setInformationLists(list);
+    }
     public CommandGenerate(String... args) {
         super(args);
     }
 
     @Override
-    public void fire(Runnable run, String arguments) {
+    public void fire(Runnable run, String arguments, boolean suppress) {
         String[] type = arguments.split(" ");
-        boolean quarter = Math.random() > 0.5;
-        int maxWeaponSlotSize = quarter ? 5 : 4;
+        int maxWeaponSlotSize = 4;
         int maxAmountOfTools = 4;
         int maxAmountOfConsumables = 4;
-        Weapon[] weapons = new Weapon[2];
-        Tool[] tools = new Tool[4];
-        Consumable[] consumables = new Consumable[4];
-        Perk[] perks = new Perk[3];
+        Weapon[] weapons;
+        Tool[] tools = new Tool[maxAmountOfTools];
+        Consumable[] consumables;
 
+        Hunter hunter;
+        String tier = "" + ((int) (Math.random() * 3));
+        System.out.println("You have to use your \"Tier " + tier + "\" hunter. Does the hunter has Quartermaster? Type \"yes\" or \"no\"");
+        boolean quarter = new Scanner(System.in).nextLine().equalsIgnoreCase("yes");
+        maxWeaponSlotSize += quarter ? 1 : 0;
 
-//        Tier tier = Tier.values()[(int) Math.round(Math.random() * (Tier.values().length - 1))];
-//        boolean hasQuarter = false;
-//        if(tier != Tier.ONE) {
-//            Scanner sc = new Scanner(System.in);
-//            System.out.println("You have to use a \"" + tier.getName() + "\" Hunter. Does the given Hunter has the trait \"Quartermaster\"? Type \"yes\" or \"no\"");
-//            hasQuarter = sc.nextLine().equalsIgnoreCase("yes");
-//        }
-//        Weapon primaryWeapon = shouldApply(1 - 0.5 / (float) run.getUnfiltered_attributeObjects().size()) ? new Weapon("Bare Hands", 0, 0, "", false) : Weapon.getRandom(maxWeaponSlotSize);
-//        Weapon secondaryWeapon = shouldApply(1 - 0.5 / (float) run.getUnfiltered_attributeObjects().size()) ? new Weapon("Bare Hands", 0, 0, "", false) : Weapon.getRandom(maxWeaponSlotSize - primaryWeapon.hasGivenAttribute(ValueType.SlotSize)));
+        ArrayList<Weapon> weaponArrayList = new ArrayList<>();
+        ArrayList<Tool> toolArrayList = new ArrayList<>();
+        ArrayList<Consumable> consumableArrayList = new ArrayList<>();
+        ArrayList<Perk> perkArrayList = new ArrayList<>();
 
-//        if (maxWeaponSlotSize > (primaryWeapon.getSize() + secondaryWeapon.getSize())) {
-//            if(primaryWeapon.isDualAble() && !secondaryWeapon.isDualAble()) {
-//                primaryWeapon.setDual(shouldApply(0.5));
-//            } else if (secondaryWeapon.isDualAble() && !primaryWeapon.isDualAble()) {
-//                secondaryWeapon.setDual(shouldApply(0.5));
-//            } else if (secondaryWeapon.isDualAble() && primaryWeapon.isDualAble()) {
-//                if (shouldApply(0.5)) {
-//                    primaryWeapon.setDual(shouldApply(0.5));
-//                } else {
-//                    secondaryWeapon.setDual(shouldApply(0.5));
-//                }
-//            }
-//        }
-//        weapons[0] = primaryWeapon;
-//        weapons[1] = secondaryWeapon;
-//        tools[0] = Tool.getToolByName("First Aid Kit");
-//        for (int i = 1; i < maxAmountOfTools; i++) {
-//            double percentile = 1d / (Math.pow(2, i));
-//            percentile *= 1.25;
-//            if (Math.random() > percentile)
-//                break;
-//            Tool tool = Tool.getRandom();
-//            tools[i] = tool;
-//        }
-//
-//        for (int i = 0; i < maxAmountOfConsumables; i++) {
-//            double percentile = 1d / (Math.pow(2, i));
-//            percentile *= 1.25;
-//            if (Math.random() > percentile)
-//                break;
-//            consumables[i] = Consumable.getRandom();
-//        }
-//
-//        if (Math.random() > 1 - Math.pow(0.5, primaryWeapon.getPossibleAmmoCount())) {
-//            primaryWeapon.applyRandomCustomAmmo();
-//        }
-//
-//        if (Math.random() > 1 - Math.pow(0.5, secondaryWeapon.getPossibleAmmoCount())) {
-//            secondaryWeapon.applyRandomCustomAmmo();
-//        }
-//
-//        Hunter hunter = new Hunter("tier", weapons, tools, consumables, perks);
-//
-//        printHunter(hunter);
-
-
-    }
-
-
-    void printHunter(Hunter hunter) {
-//        System.out.printf(weaponInfo, (hunter.getWeaponSlot1().hasGivenAttribute(ValueType.Name).getAttribute().getData() + (hunter.getWeaponSlot1().isDual() ? ", dual-Wield" : "")), hunter.getWeaponSlot1().getAppliedAmmo(), (hunter.getWeaponSlot2().hasGivenAttribute(ValueType.Name).getAttribute().getData() + (hunter.getWeaponSlot2().isDual() ? ", dual-Wield" : "")), hunter.getWeaponSlot2().getAppliedAmmo());
-        for (Tool tool : hunter.getToolArray()) {
-            if (!tool.hasGivenAttribute(ValueType.Name).doesExist())
-                break;
-            System.out.println("Tool: " + tool.hasGivenAttribute(ValueType.Name).getAttribute().getData());
+        for (AttributeObject attributeObject : run.getFiltered_attributeObjects()) {
+            if (attributeObject.getClass().toString().endsWith("Weapon")) {
+                weaponArrayList.add((Weapon) attributeObject);
+            } else if (attributeObject.getClass().toString().endsWith("Tool")) {
+                toolArrayList.add((Tool) attributeObject);
+            } else if (attributeObject.getClass().toString().endsWith("Consumable")) {
+                consumableArrayList.add((Consumable) attributeObject);
+            } else if (attributeObject.getClass().toString().endsWith("Perk")) {
+                perkArrayList.add((Perk) attributeObject);
+            }
         }
-        System.out.println();
-        for (Consumable consumable : hunter.getConsumableArray()) {
-            if (!consumable.hasGivenAttribute(ValueType.Name).doesExist())
-                break;
-            System.out.println("Consumable: " + consumable.hasGivenAttribute(ValueType.Name).getAttribute().getData());
+
+
+        /*
+         Start section for Weapons
+         */
+        boolean updatePrimaryToDual = false, updateSecondaryToDual = false;
+        Weapon primary, secondary;
+        if (weaponArrayList.isEmpty()) {
+            System.out.println("\tThere are no Weapons that fill the requirements. Therefor the generator will ignore the ruleset. ");
+
+
         }
-        System.out.println("\nThis hunter will cost you " + calculateCost(hunter) + " plus the cost of the custom ammo");
+
+        Weapon bare_hands = new Weapon(new Attribute("Name", "Bare Hands"), new Attribute("Slot_Size", "0"));
+
+        if (weaponArrayList.isEmpty()) {
+            primary = bare_hands;
+        } else {
+            primary = weaponArrayList.get((int) (Math.random() * weaponArrayList.size()));
+        }
+        if (primary.hasGivenAttribute(ValueType.Slot_Size).doesExist()) {
+            maxWeaponSlotSize -= Integer.parseInt(primary.hasGivenAttribute(ValueType.Slot_Size).getAttribute().getData().replaceAll("[^0-9.]", ""));
+        }
+        ArrayList<Weapon> helperArrayList = new ArrayList<>(weaponArrayList);
+        for (Weapon w : weaponArrayList) {
+            AttributeIdentifier slotSize = w.hasGivenAttribute(ValueType.Slot_Size);
+            if (!slotSize.doesExist()) {
+                continue;
+            }
+            if (Integer.parseInt(w.hasGivenAttribute(ValueType.Slot_Size).getAttribute().getData().replaceAll("[^0-9.]", "")) > maxWeaponSlotSize) {
+                helperArrayList.remove(w);
+            }
+        }
+        weaponArrayList = helperArrayList;
+
+        if (weaponArrayList.isEmpty()) {
+            secondary = bare_hands;
+        } else {
+            secondary = weaponArrayList.get((int) (Math.random() * weaponArrayList.size()));
+        }
+
+        if (secondary.hasGivenAttribute(ValueType.Slot_Size).doesExist()) {
+            maxWeaponSlotSize -= Integer.parseInt(secondary.hasGivenAttribute(ValueType.Slot_Size).getAttribute().getData().replaceAll("[^0-9.]", ""));
+        }
+
+        if (maxWeaponSlotSize > 0) {
+            AttributeIdentifier primaryIsDualable = primary.hasGivenAttribute(ValueType.Dualable);
+            AttributeIdentifier secondaryIsDualable = secondary.hasGivenAttribute(ValueType.Dualable);
+            if (primaryIsDualable.doesExist()) {
+                if (shouldApply(0.5)) {
+                    updatePrimaryToDual = true;
+                    maxWeaponSlotSize--;
+                }
+            }
+            if (maxWeaponSlotSize > 0) {
+                if (secondaryIsDualable.doesExist()) {
+                    if (shouldApply(0.5)) {
+                        updateSecondaryToDual = true;
+                        maxWeaponSlotSize--;
+                    }
+                }
+            }
+        }
+
+        AttributeIdentifier primaryMeleeable = primary.hasGivenAttribute(ValueType.Meleeable);
+        AttributeIdentifier secondaryMeleeable = secondary.hasGivenAttribute(ValueType.Meleeable);
+
+        boolean hasMeleeWeapon = false;
+        if (primaryMeleeable.doesExist()) {
+            if (primaryMeleeable.getAttribute().getData().equalsIgnoreCase("True")) {
+                hasMeleeWeapon = true;
+            }
+        }
+        if (secondaryMeleeable.doesExist()) {
+            if (secondaryMeleeable.getAttribute().getData().equalsIgnoreCase("True")) {
+                hasMeleeWeapon = true;
+            }
+        }
+        AttributeIdentifier primaryCustomAmmo = primary.hasGivenAttribute(ValueType.Custom_Ammo);
+        AttributeIdentifier secondaryCustomAmmo = secondary.hasGivenAttribute(ValueType.Custom_Ammo);
+        String primaryAmmo = "", secondaryAmmo = "";
+
+        String ruleStatingAmmo = "";
+        for (Rule r : run.getRules()) {
+            if (r.getAttribute().equalsIgnoreCase("Custom_Ammo")) {
+                ruleStatingAmmo = r.getOperand();
+            }
+        }
+        if (primaryCustomAmmo.doesExist()) {
+            if (shouldApply(0.5)) {
+                String[] ammos = (primaryCustomAmmo.getAttribute().getData() + "").split(",");
+                primaryAmmo = ruleStatingAmmo.equalsIgnoreCase("") ? ammos[(int) (Math.random() * ammos.length)] : ruleStatingAmmo;
+            }
+        }
+
+        if (secondaryCustomAmmo.doesExist()) {
+            if (shouldApply(0.5)) {
+                String[] ammos = (secondaryCustomAmmo.getAttribute().getData() + "").split(",");
+                secondaryAmmo = ruleStatingAmmo.equalsIgnoreCase("") ? ammos[(int) (Math.random() * ammos.length)] : ruleStatingAmmo;
+            }
+        }
+
+        weapons = new Weapon[]{
+          primary, secondary
+        };
+
+        /*
+         Start section for consumables
+         */
+        Consumable[] consumableHelperArray = new Consumable[maxAmountOfConsumables];
+        for (int i = 0; i < consumableHelperArray.length; i++) {
+            if (consumableArrayList.isEmpty()) {
+                for (int j = i; j < consumableHelperArray.length; j++) {
+                    consumableHelperArray[j] = new Consumable(new Attribute("Name", "None"));
+                }
+                break;
+            }
+            if (!shouldApply(Math.pow(twentyp, i))) {
+                for (int j = i; j < consumableHelperArray.length; j++) {
+                    consumableHelperArray[j] = new Consumable(new Attribute("Name", "None"));
+                }
+                break;
+            }
+            consumableHelperArray[i] = consumableArrayList.get((int) (Math.random() * consumableArrayList.size()));
+        }
+        consumables = consumableHelperArray;
+
+
+        /*
+         Start section for tools
+         */
+        int healthItems = 0;
+        for (Consumable consumable : consumables) {
+            AttributeIdentifier isHealthItem = consumable.hasGivenAttribute(ValueType.Use_Type);
+            if (isHealthItem.doesExist()) {
+                if (isHealthItem.getAttribute().getData().contains("Support")) {
+                    healthItems++;
+                }
+            }
+        }
+
+
+        ArrayList<Tool> tooMeleelList = new ArrayList<>();
+        for (AttributeObject tool : run.getUnfiltered_attributeObjects()) {
+            AttributeIdentifier meleeAble = tool.hasGivenAttribute(ValueType.Meleeable);
+            if (meleeAble.doesExist()) {
+                if (meleeAble.getAttribute().getData().equalsIgnoreCase("True") && tool.getClass().toString().endsWith("Tool")) {
+                    tooMeleelList.add((Tool) tool);
+                }
+            }
+        }
+        boolean hasToolMelee = false;
+        if (!hasMeleeWeapon) {
+            tools[0] = tooMeleelList.get((int) (Math.random() * tooMeleelList.size()));
+            hasToolMelee = true;
+        }
+
+        Tool med_kit = null;
+        for (Tool tool : toolArrayList) {
+            AttributeIdentifier hasName = tool.hasGivenAttribute(ValueType.Name);
+            if (!hasName.doesExist()) {
+                continue;
+            }
+            if (hasName.getAttribute().getData().equalsIgnoreCase("First Aid Kit")) {
+                med_kit = tool;
+                toolArrayList.remove(med_kit);
+                break;
+            }
+        }
+
+        if (med_kit == null) {
+            med_kit = new Tool(new Attribute("Name", "First Aid Kit"), new Attribute("Cost", "30"), new Attribute("Use_Type", "Tool, Support"));
+        }
+
+        if (healthItems <= 3) {
+            tools[3] = med_kit;
+            maxAmountOfTools--;
+        }
+
+        int beginIndex = hasToolMelee ? 1 : 0;
+
+        for (int i = beginIndex; i < maxAmountOfTools; i++) {
+            // failsafe; no possible tools can be generated -> fill with nothing
+            if (toolArrayList.isEmpty()) {
+                for (int j = i; j < maxAmountOfTools - 1; j++) {
+                    tools[j] = new Tool(new Attribute("Name", "None"));
+                }
+                break;
+            }
+
+            if (!shouldApply(Math.pow(twentyp, i))) {
+                for (int j = i; j < tools.length; j++)
+                    tools[j] = new Tool(new Attribute("Name", "None"));
+
+                break;
+            }
+            Tool nT = toolArrayList.get((int) (Math.random() * toolArrayList.size()));
+            toolArrayList.remove(nT);
+            tools[i] = nT;
+
+        }
+
+        if(!tools[3].hasGivenAttribute(ValueType.Name).getAttribute().getData().equalsIgnoreCase("First Aid Kit") && healthItems <= 3) {
+            tools[3] = med_kit;
+        }
+
+        hunter = new Hunter(tier, weapons, tools, consumables, null);
+        hunter.updateWeaponDual(updatePrimaryToDual, updateSecondaryToDual);
+        hunter.applyCustomAmmo(primaryAmmo, secondaryAmmo);
+        run.updateHunter(hunter);
+
+        run.printHunter();
+
     }
 
-    double calculateCost(Hunter hunter) {
-
-//        double cost;
-//        Weapon[] weapons = hunter.getWeaponArray();
-//        Tool[] tools = hunter.getToolArray();
-//        Consumable[] consumables = hunter.getConsumableArray();
-//        double weaponCost = Arrays.stream(weapons).mapToDouble(Weapon::getCost).sum();
-//        double toolCost = Arrays.stream(tools).mapToDouble(SimpleType::getCost).sum();
-//        double consumableCost = Arrays.stream(consumables).mapToDouble(SimpleType::getCost).sum();
-//        cost = weaponCost + toolCost + consumableCost;
-        return 0;
-
-    }
 
     private boolean shouldApply(double in) {
-        return Math.random() > in;
+//        return Math.random() < in;
+        return in > 0;
     }
 
     @Override

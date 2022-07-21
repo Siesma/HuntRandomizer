@@ -1,37 +1,44 @@
 package FileHelper;
 
 import FileHelper.data.InformationData;
+import FileHelper.data.RuleType;
 
 public enum ValueType {
 
-    Name(new InformationData("Name", "")),
-    Cost(new InformationData("Cost", "")),
-    Slot_Size(new InformationData("Slot_Size", "")),
-    Unlock(new InformationData("Unlock", "")),
-    Damage(new InformationData("Damage", "")),
-    Weapon_Family(new InformationData("Category", ""), new InformationData("Weapon_Family", "")),
-    Dualable(new InformationData("Dualable", "")),
-    Effective_Range(new InformationData("Effective_Range", "")),
-    ROF(new InformationData("ROF", ""), new InformationData("Rate_Of_Fire", "")),
-    Handling(new InformationData("Handling", "")),
-    Reload_Speed(new InformationData("Reload_Speed", "")),
-    Muzzle_Velocity(new InformationData("Muzzle_Velocity", "")),
-    Meleeable(new InformationData("Meleeable", "")),
-    Light_Melee(new InformationData("Light_Melee", "")),
-    Heavy_Melee(new InformationData("Heavy_Melee", "")),
-    Custom_Ammo(new InformationData("CustomAmmos", ""), new InformationData("Custom_Ammo", "")),
-    Tier(new InformationData("Tier", "")),
-    Use_Type(new InformationData("Use_Type", ""));
+  Name(RuleType.String, new InformationData("Name", "")),
+  Cost(RuleType.Integer, new InformationData("Cost", "")),
+  Slot_Size(RuleType.Integer, new InformationData("Slot_Size", "")),
+  Unlock(RuleType.Integer, new InformationData("Unlock", "")),
+  Damage(RuleType.Integer, new InformationData("Damage", "")),
+  Weapon_Family(RuleType.String, new InformationData("Category", ""), new InformationData("Weapon_Family", "")),
+  Dualable(RuleType.Boolean, new InformationData("Dualable", "")),
+  Effective_Range(RuleType.Integer, new InformationData("Effective_Range", "")),
+  ROF(RuleType.Integer, new InformationData("ROF", ""), new InformationData("Rate_Of_Fire", "")),
+  Handling(RuleType.Integer, new InformationData("Handling", "")),
+  Reload_Speed(RuleType.Integer, new InformationData("Reload_Speed", "")),
+  Muzzle_Velocity(RuleType.Integer, new InformationData("Muzzle_Velocity", "")),
+  Meleeable(RuleType.Boolean, new InformationData("Meleeable", "")),
+  Light_Melee(RuleType.Integer, new InformationData("Light_Melee", "")),
+  Heavy_Melee(RuleType.Integer, new InformationData("Heavy_Melee", "")),
+  Custom_Ammo(RuleType.Set, new InformationData("CustomAmmos", ""), new InformationData("Custom_Ammo", "")),
+  Tier(RuleType.Integer, new InformationData("Tier", "")),
+  Use_Type(RuleType.Set, new InformationData("Use_Type", ""));
 
-    private InformationData[] identifier;
+  private InformationData[] identifier;
+  private RuleType ruleType;
 
-    ValueType(InformationData... identifier) {
-        this.identifier = identifier;
-    }
+  ValueType(RuleType ruleType, InformationData... identifier) {
+    this.ruleType = ruleType;
+    this.identifier = identifier;
+  }
 
-    public InformationData[] getIdentifier() {
-        return identifier;
-    }
+  public InformationData[] getIdentifier() {
+    return identifier;
+  }
+
+  public RuleType getRuleType() {
+    return ruleType;
+  }
 
 }
 
