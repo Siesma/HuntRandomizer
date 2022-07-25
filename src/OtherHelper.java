@@ -19,7 +19,7 @@ public class OtherHelper {
       AttributeIdentifier useType = null;
       if ((useType = ato.hasGivenAttribute(ValueType.Use_Type)) != null) {
 //        System.out.print("@" + useType.getAttribute().getData().replace(" ", "").split(",")[0]);
-        stringBuilder.append("@" + useType.getAttribute().getData().replace(" ", "").split(",")[0]);
+        stringBuilder.append("@" + useType.getAttribute().getData().replace(" ", "").split(",")[0].replace("\n", "") + "\n");
       }
       for (Attribute attribute : ato.getAttributes()) {
 //        System.out.println("\t" + attribute.toString().replace(";", ":").replace("\"", ""));

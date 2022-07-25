@@ -2,6 +2,8 @@
 	Name: Bomb Lance
 	Cost: 199$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 78
 	Damage: 150
 	Weapon_Family: Bomb Lance
@@ -20,6 +22,8 @@
 	Name: Caldwell Rival 78
 	Cost: 100$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 18
 	Damage: 175
 	Weapon_Family: Caldwell Rival 78
@@ -38,6 +42,8 @@
 	Name: Crossbow
 	Cost: 73$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 260
 	Weapon_Family: Crossbow
@@ -56,6 +62,8 @@
 	Name: Crown & King Auto-5
 	Cost: 600$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 82
 	Damage: 185
 	Weapon_Family: Crown & King Auto-5
@@ -74,6 +82,8 @@
 	Name: Lebel 1886
 	Cost: 397$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 52
 	Damage: 132
 	Weapon_Family: Lebel 1886
@@ -92,6 +102,8 @@
 	Name: Lebel 1886 Marksman
 	Cost: 437$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 132
 	Weapon_Family: Lebel 1886
@@ -110,6 +122,8 @@
 	Name: Lebel 1886 Talon
 	Cost: 422$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 132
 	Weapon_Family: Lebel 1886
@@ -128,6 +142,8 @@
 	Name: Martini-Henry IC1
 	Cost: 122$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 16
 	Damage: 143
 	Weapon_Family: Martini-Henry IC1
@@ -146,6 +162,8 @@
 	Name: Martini-Henry IC1 Deadeye
 	Cost: 145$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 143
 	Weapon_Family: Martini-Henry IC1
@@ -164,6 +182,8 @@
 	Name: Martini-Henry IC1 Marksman
 	Cost: 173$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 143
 	Weapon_Family: Martini-Henry IC1
@@ -182,6 +202,8 @@
 	Name: Martini-Henry IC1 Riposte
 	Cost: 164$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 143
 	Weapon_Family: Martini-Henry IC1
@@ -200,6 +222,8 @@
 	Name: Mosin-Nagant M1891
 	Cost: 490$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 72
 	Damage: 136
 	Weapon_Family: Mosin-Nagant M1891
@@ -218,6 +242,8 @@
 	Name: Mosin-Nagant M1891 Avtomat
 	Cost: 1250$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 136
 	Weapon_Family: Mosin-Nagant M1891
@@ -236,6 +262,8 @@
 	Name: Mosin-Nagant M1891 Bayonet
 	Cost: 540$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 136
 	Weapon_Family: Mosin-Nagant M1891
@@ -254,6 +282,8 @@
 	Name: Mosin-Nagant M1891 Sniper
 	Cost: 550$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 136
 	Weapon_Family: Mosin-Nagant M1891
@@ -272,6 +302,8 @@
 	Name: Nagant M1895 Officer Carbine
 	Cost: 155$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 104
 	Weapon_Family: Nagant M1895 Officer
@@ -290,6 +322,8 @@
 	Name: Nagant M1895 Officer Carbine Deadeye
 	Cost: 211$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 104
 	Weapon_Family: Nagant M1895 Officer
@@ -308,6 +342,8 @@
 	Name: Nitro Express Rifle
 	Cost: 1015$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 88
 	Damage: 364
 	Weapon_Family: Nitro Express Rifle
@@ -326,6 +362,8 @@
 	Name: Romero 77
 	Cost: 34$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 1
 	Damage: 200
 	Weapon_Family: Romero 77
@@ -344,6 +382,8 @@
 	Name: Romero 77 Talon
 	Cost: 59$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 200
 	Weapon_Family: Romero 77
@@ -362,6 +402,8 @@
 	Name: Sparks LRR
 	Cost: 130$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 26
 	Damage: 149
 	Weapon_Family: Sparks LRR
@@ -380,6 +422,8 @@
 	Name: Sparks LRR Silencer
 	Cost: 150$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 149
 	Weapon_Family: Sparks LRR
@@ -398,6 +442,8 @@
 	Name: Sparks LRR Sniper
 	Cost: 199$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 149
 	Weapon_Family: Sparks LRR
@@ -416,6 +462,8 @@
 	Name: Specter 1882
 	Cost: 188$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 58
 	Damage: 185
 	Weapon_Family: Specter 1882
@@ -434,6 +482,8 @@
 	Name: Specter 1882 Bayonet
 	Cost: 223$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 175
 	Weapon_Family: Specter 1882
@@ -452,6 +502,8 @@
 	Name: Springfield 1866
 	Cost: 38$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 1
 	Damage: 132
 	Weapon_Family: Springfield 1866
@@ -470,6 +522,8 @@
 	Name: Springfield 1866 Marksman
 	Cost: 73$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 132
 	Weapon_Family: Springfield 1866
@@ -488,6 +542,8 @@
 	Name: Vetterli 71 Karabiner
 	Cost: 105$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 6
 	Damage: 130
 	Weapon_Family: Vetterli 71 Karabiner
@@ -506,6 +562,8 @@
 	Name: Vetterli 71 Karabiner Bayonet
 	Cost: 155$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 130
 	Weapon_Family: Vetterli 71 Karabiner
@@ -524,6 +582,8 @@
 	Name: Vetterli 71 Karabiner Deadeye
 	Cost: 130$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 130
 	Weapon_Family: Vetterli 71 Karabiner
@@ -542,6 +602,8 @@
 	Name: Winfield 1887 Terminus
 	Cost: 309$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 64
 	Damage: 185
 	Weapon_Family: Winfield 1887 Terminus
@@ -560,6 +622,8 @@
 	Name: Winfield M1873
 	Cost: 75$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 42
 	Damage: 110
 	Weapon_Family: Winfield M1873
@@ -578,6 +642,8 @@
 	Name: Winfield M1873 Aperture
 	Cost: 80$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 110
 	Weapon_Family: Winfield M1873
@@ -596,6 +662,8 @@
 	Name: Winfield M1873 Musket Bayonet
 	Cost: 137$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 110
 	Weapon_Family: Winfield M1873
@@ -614,6 +682,8 @@
 	Name: Winfield M1873 Swift
 	Cost: 128$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 110
 	Weapon_Family: Winfield M1873
@@ -632,6 +702,8 @@
 	Name: Winfield M1873 Talon
 	Cost: 100$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 110
 	Weapon_Family: Winfield M1873
@@ -650,6 +722,8 @@
 	Name: Winfield M1873C
 	Cost: 41$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 1
 	Damage: 110
 	Weapon_Family: Winfield M1873C
@@ -668,6 +742,8 @@
 	Name: Winfield M1873C Marksman
 	Cost: 56$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 110
 	Weapon_Family: Winfield M1873C
@@ -686,6 +762,8 @@
 	Name: Winfield M1873C Silencer
 	Cost: 55$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 110
 	Weapon_Family: Winfield M1873C
@@ -704,6 +782,8 @@
 	Name: Winfield M1876 Centennial
 	Cost: 277$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 58
 	Damage: 123
 	Weapon_Family: Winfield M1876 Centennial
@@ -722,6 +802,8 @@
 	Name: Winfield M1876 Centennial Sniper
 	Cost: 277$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 123
 	Weapon_Family: Winfield M1876 Centennial
@@ -740,6 +822,8 @@
 	Name: Bornheim No. 3 Match
 	Cost: 224$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 74
 	Weapon_Family: Bornheim No. 3
@@ -758,6 +842,8 @@
 	Name: Caldwell Rival 78 Handcannon
 	Cost: 85$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 85
 	Weapon_Family: Caldwell Rival 78 Handcannon
@@ -776,6 +862,8 @@
 	Name: Dolch 96 Precision
 	Cost: 790$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 110
 	Weapon_Family: Dolch 96
@@ -794,6 +882,8 @@
 	Name: Mosin-Nagant M1891 Obrez
 	Cost: 290$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 136
 	Weapon_Family: Mosin-Nagant M1891
@@ -812,6 +902,8 @@
 	Name: Mosin-Nagant M1891 Obrez Drum
 	Cost: 350$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 136
 	Weapon_Family: Mosin-Nagant M1891
@@ -830,6 +922,8 @@
 	Name: Mosin-Nagant M1891 Obrez Mace
 	Cost: 310$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 136
 	Weapon_Family: Mosin-Nagant M1891
@@ -848,6 +942,8 @@
 	Name: Nagant M1895 Deadeye
 	Cost: 42$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 91
 	Weapon_Family: Nagant M1895
@@ -866,6 +962,8 @@
 	Name: Nagant M1895 Precision
 	Cost: 29$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 91
 	Weapon_Family: Nagant M1895
@@ -884,6 +982,8 @@
 	Name: Romero 77 Handcannon
 	Cost: 26$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 140
 	Weapon_Family: Romero 77
@@ -902,6 +1002,8 @@
 	Name: Romero 77 Hatchet
 	Cost: 62$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 85
 	Weapon_Family: Romero 77
@@ -920,6 +1022,8 @@
 	Name: Specter 1882 Compact
 	Cost: 164$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 85
 	Weapon_Family: Specter 1882
@@ -938,6 +1042,8 @@
 	Name: Springfield 1866 Compact
 	Cost: 33$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 132
 	Weapon_Family: Springfield 1866
@@ -956,6 +1062,8 @@
 	Name: Springfield 1866 Compact Deadeye
 	Cost: 46$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 132
 	Weapon_Family: Springfield 1866
@@ -974,6 +1082,8 @@
 	Name: Springfield 1866 Compact Striker
 	Cost: 56$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 132
 	Weapon_Family: Springfield 1866
@@ -992,6 +1102,8 @@
 	Name: Winfield 1887 Terminus Handcannon
 	Cost: 289$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 75
 	Weapon_Family: Winfield 1887 Terminus
@@ -1010,6 +1122,8 @@
 	Name: Winfield M1873C Vandal
 	Cost: 35$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 110
 	Weapon_Family: Winfield M1873C
@@ -1028,6 +1142,8 @@
 	Name: Winfield M1873C Vandal Striker
 	Cost: 39$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 110
 	Weapon_Family: Winfield M1873C
@@ -1046,6 +1162,8 @@
 	Name: Winfield M1873C Vandal Deadeye
 	Cost: 45$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 110
 	Weapon_Family: Winfield M1873C
@@ -1064,6 +1182,8 @@
 	Name: Bornheim No. 3
 	Cost: 201$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 30
 	Damage: 74
 	Weapon_Family: Bornheim No. 3
@@ -1082,6 +1202,8 @@
 	Name: Bornheim No. 3 Extended
 	Cost: 306$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 74
 	Weapon_Family: Bornheim No. 3
@@ -1100,6 +1222,8 @@
 	Name: Caldwell Conversion Chain Pistol
 	Cost: 50$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 104
 	Weapon_Family: Caldwell Conversion
@@ -1118,6 +1242,8 @@
 	Name: Caldwell Conversion Pistol
 	Cost: 26$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 22
 	Damage: 104
 	Weapon_Family: Caldwell Conversion
@@ -1136,6 +1262,8 @@
 	Name: Caldwell Conversion Uppercut
 	Cost: 275$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 130
 	Weapon_Family: Caldwell Conversion
@@ -1154,6 +1282,8 @@
 	Name: Caldwell Pax
 	Cost: 100$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 10
 	Damage: 110
 	Weapon_Family: Caldwell Pax
@@ -1172,6 +1302,8 @@
 	Name: Caldwell Pax Claw
 	Cost: 125$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 110
 	Weapon_Family: Caldwell Pax
@@ -1190,6 +1322,8 @@
 	Name: Dolch 96
 	Cost: 750$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 68
 	Damage: 110
 	Weapon_Family: Dolch 96
@@ -1208,6 +1342,8 @@
 	Name: Hand Crossbow
 	Cost: 35$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 4
 	Damage: 195
 	Weapon_Family: Hand Crossbow
@@ -1226,6 +1362,8 @@
 	Name: LeMat Mark II Revolver
 	Cost: 95$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 46
 	Damage: 97
 	Weapon_Family: LeMat Mark II
@@ -1244,6 +1382,8 @@
 	Name: Nagant M1895
 	Cost: 24$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 1
 	Damage: 91
 	Weapon_Family: Nagant M1895
@@ -1262,6 +1402,8 @@
 	Name: Nagant M1895 Officer
 	Cost: 66$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 36
 	Damage: 91
 	Weapon_Family: Nagant M1895 Officer
@@ -1280,6 +1422,8 @@
 	Name: Nagant M1895 Officer Brawler
 	Cost: 80$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 91
 	Weapon_Family: Nagant M1895 Officer
@@ -1298,6 +1442,8 @@
 	Name: Nagant M1895 Silencer
 	Cost: 53$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock:
 	Damage: 91
 	Weapon_Family: Nagant M1895
@@ -1313,9 +1459,11 @@
 	Tier: 2
 	Use_Type: Weapon
 @Weapon
-    Name: Combat Axe
+	Name: Combat Axe
 	Cost: 5$
 	Slot_Size: 2
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 1
 	Weapon_Family: Combat Axe
 	Handling: 20%
@@ -1326,9 +1474,11 @@
 	Tier: 1
 	Use_Type: Weapon
 @Weapon
-    Name: Cavalry Saber
+	Name: Cavalry Saber
 	Cost: 60$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 62
 	Weapon_Family: Cavalry Saber
 	Handling: 47%
@@ -1339,9 +1489,11 @@
 	Tier: 2
 	Use_Type: Weapon
 @Weapon
-    Name: Machete
+	Name: Machete
 	Cost: 18$
 	Slot_Size: 1
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 18
 	Weapon_Family: Machete
 	Handling: 64%
@@ -1352,9 +1504,11 @@
 	Tier: 1
 	Use_Type: Weapon
 @Weapon
-    Name: Bare Hands
+	Name: Bare Hands
 	Cost: 0
 	Slot_Size: 0
+	Capacity: 0
+	Reserve: 0
 	Unlock: Rank 1
 	Weapon_Family: Bare Hands
 	Meleeable: true
@@ -1365,6 +1519,8 @@
 	Name: Winfield 1893 Slate
 	Cost: 300$
 	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
 	Unlock: 48
 	Damage: 180
 	Weapon_Family: Winfield 1893 Slate
@@ -1380,517 +1536,519 @@
 	Tier: 3
 	Use_Type: Weapon
 @Weapon
-    Name: Berthier Mle 1892
-    Cost: 356$
-    Slot_Size: 3
-    Unlock: 78
-    Damage: 130
-    Weapon_Family: Berthier Mle 1892
-    Effective_Range: 305m
-    ROF: 36rpm
-    Handling: 79%
-    Reload_Speed: 3s
-    Muzzle_Velocity: 590m/s
-    Meleeable: false
-    Light_Melee: 27
-    Heavy_Melee: 54
-    Custom_Ammo: Incendiary, Spitzer
-    Tier: 3
-    Use_Type: Weapon
+	Name: Berthier Mle 1892
+	Cost: 356$
+	Slot_Size: 3
+	Capacity: 0
+	Reserve: 0
+	Unlock: 78
+	Damage: 130
+	Weapon_Family: Berthier Mle 1892
+	Effective_Range: 305m
+	ROF: 36rpm
+	Handling: 79%
+	Reload_Speed: 3s
+	Muzzle_Velocity: 590m/s
+	Meleeable: false
+	Light_Melee: 27
+	Heavy_Melee: 54
+	Custom_Ammo: Incendiary, Spitzer
+	Tier: 3
+	Use_Type: Weapon
 @Tool
 	Name: Alert trip Mine
 	Cost: 60
 	Meleeable: false
-	Use_Type: Tool, Trap
 	Tier: 2
+	Use_Type: Tool, Trap
 @Tool
 	Name: Blank Fire Decoys
 	Cost: 45
 	Meleeable: false
-	Use_Type: Tool, Deception
 	Tier: 1
+	Use_Type: Tool, Deception
 @Tool
 	Name: Choke Bomb
 	Cost: 25
 	Unlock: Rank 11
 	Meleeable: false
-	Use_Type: Tool, Support
 	Tier: 3
+	Use_Type: Tool, Support
 @Tool
 	Name: Concertina Trip Mine
 	Cost: 90
 	Unlock: Rank 40
 	Meleeable: false
-	Use_Type: Tool, Trap
 	Tier: 2
+	Use_Type: Tool, Trap
 @Tool
 	Name: Decoy Fuses
 	Cost: 60
 	Meleeable: false
-	Use_Type: Tool, Deception
 	Tier: 1
+	Use_Type: Tool, Deception
 @Tool
 	Name: Decoys
 	Cost: 6
 	Unlock: Rank 32
 	Meleeable: false
-	Use_Type: Tool, Deception
 	Tier: 1
+	Use_Type: Tool, Deception
 @Tool
 	Name: Dusters
 	Cost: 15
 	Unlock: Rank 20
 	Meleeable: true
-	Use_Type: Tool
 	Tier: 3
+	Use_Type: Tool
 @Tool
 	Name: Electric Lamp
 	Cost: 5
 	Unlock: Rank 1
 	Meleeable: false
-	Use_Type: Tool
 	Tier: 1
+	Use_Type: Tool
 @Tool
 	Name: First Aid Kit
 	Cost: 30
 	Unlock: Rank 1
 	Meleeable: false
-	Use_Type: Tool, Support
 	Tier: 3
+	Use_Type: Tool, Support
 @Tool
 	Name: Flare Pistol
 	Cost: 36
 	Meleeable: false
-	Use_Type: Tool
 	Tier: 3
+	Use_Type: Tool
 @Tool
 	Name: Fusees
 	Cost: 10
 	Meleeable: false
-	Use_Type: Tool
 	Tier: 1
+	Use_Type: Tool
 @Tool
 	Name: Heavy Knife
 	Cost: 25
 	Meleeable: true
-	Use_Type: Tool, Support
 	Tier: 2
+	Use_Type: Tool, Support
 @Tool
 	Name: Knife
 	Cost: 20
 	Unlock: Rank 1
 	Meleeable: true
-	Use_Type: Tool
 	Tier: 2
+	Use_Type: Tool
 @Tool
 	Name: Knuckle Knife
 	Cost: 15
 	Meleeable: true
-	Use_Type: Tool
 	Tier: 3
+	Use_Type: Tool
 @Tool
 	Name: Poison Trip Mine
 	Cost: 60
 	Meleeable: false
-	Use_Type: Tool, Trap
 	Tier: 2
+	Use_Type: Tool, Trap
 @Tool
 	Name: Quad Derringer
 	Cost: 30
 	Unlock: Rank 66
 	Meleeable: false
-	Use_Type: Tool
 	Tier: 2
+	Use_Type: Tool
 @Tool
 	Name: Spyglass
 	Cost: 8
 	Unlock: Rank 24
 	Meleeable: false
-	Use_Type: Tool
 	Tier: 1
+	Use_Type: Tool
 @Tool
 	Name: Throwing Knives
 	Cost: 40
 	Meleeable: true
-	Use_Type: Tool
 	Tier: 3
+	Use_Type: Tool
 @Perk
 	Name: Adrenaline
 	Cost: 1
 	Unlock: Rank 1
-	Use_Type: Perk, Sustain
 	Tier: 1
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Conduit
 	Cost: 4
 	Unlock: Rank 1
-	Use_Type: Perk, Sustain
 	Tier: 1
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Greyhound
 	Cost: 4
 	Unlock: Rank 1
-	Use_Type: Perk, Movement
 	Tier: 2
+	Use_Type: Perk, Movement
 @Perk
 	Name: Packmule
 	Cost: 3
 	Unlock: Rank 1
-	Use_Type: Perk, Loot
 	Tier: 3
+	Use_Type: Perk, Loot
 @Perk
 	Name: Hornskin
 	Cost: 3
 	Unlock: Rank 2
-	Use_Type: Perk, Sustain
 	Tier: 2
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Determination
 	Cost: 3
 	Unlock: Rank 5
-	Use_Type: Perk, Sustain
 	Tier: 2
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Iron Repeater
 	Cost: 2
 	Unlock: Rank 7
-	Use_Type: Perk, Aim
 	Tier: 2
+	Use_Type: Perk, Aim
 @Perk
 	Name: Resilience
 	Cost: 2
 	Unlock: Rank 9
-	Use_Type: Perk, Sustain
 	Tier: 3
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Bolt Thrower
 	Cost: 4
 	Unlock: Rank 13
-	Use_Type: Perk, Reload
 	Tier: 3
+	Use_Type: Perk, Reload
 @Perk
 	Name: Levering
 	Cost: 3
 	Unlock: Rank 14
-	Use_Type: Perk, Aim
 	Tier: 2
+	Use_Type: Perk, Aim
 @Perk
 	Name: Salveskin
 	Cost: 5
 	Unlock: Rank 15
-	Use_Type: Perk, Sustain
 	Tier: 3
+	Use_Type: Perk, Sustain
 @Perk
-   	Name: Bulwark
-   	Cost: 2
-   	Unlock: Rank 16
-   	Use_Type: Perk, Sustain
-   	Tier: 2
+	Name: Bulwark
+	Cost: 2
+	Unlock: Rank 16
+	Tier: 2
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Fanning
 	Cost: 7
 	Unlock: Rank 17
-	Use_Type: Perk, Aim
 	Tier: 2
+	Use_Type: Perk, Aim
 @Perk
 	Name: Ghoul
 	Cost: 4
 	Unlock: Rank 19
-	Use_Type: Perk, Sustain
 	Tier: 1
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Gator Legs
 	Cost: 2
 	Unlock: Rank 21
-	Use_Type: Perk, Movement
 	Tier: 2
+	Use_Type: Perk, Movement
 @Perk
 	Name: Deadeye Scopesmith
 	Cost: 1
 	Unlock: Rank 23
-	Use_Type: Perk, Aim
 	Tier: 1
+	Use_Type: Perk, Aim
 @Perk
 	Name: Silent Killer
 	Cost: 5
 	Unlock: Rank 25
-	Use_Type: Perk, Stealth
 	Tier: 2
+	Use_Type: Perk, Stealth
 @Perk
 	Name: Lightfoot
 	Cost: 5
 	Unlock: Rank 27
-	Use_Type: Perk, Stealth
 	Tier: 3
+	Use_Type: Perk, Stealth
 @Perk
 	Name: Serpent
 	Cost: 4
 	Unlock: Rank 28
-	Use_Type: Perk, Support
 	Tier: 2
+	Use_Type: Perk, Support
 @Perk
 	Name: Physician
 	Cost: 5
 	Unlock: Rank 29
-	Use_Type: Perk, Sustain
 	Tier: 3
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Steady Aim
 	Cost: 3
 	Unlock: Rank 31
-	Use_Type: Perk, Aim
 	Tier: 2
+	Use_Type: Perk, Aim
 @Perk
 	Name: Whispersmith
 	Cost: 2
 	Unlock: Rank 32
-	Use_Type: Perk, Stealth
 	Tier: 1
+	Use_Type: Perk, Stealth
 @Perk
 	Name: Steady Hand
 	Cost: 2
 	Unlock: Rank 33
-	Use_Type: Perk, Aim
 	Tier: 1
+	Use_Type: Perk, Aim
 @Perk
 	Name: Marksman Scopesmith
 	Cost: 2
 	Unlock: Rank 35
-	Use_Type: Perk, Aim
 	Tier: 1
+	Use_Type: Perk, Aim
 @Perk
 	Name: Bloodless
 	Cost: 4
 	Unlock: Rank 37
-	Use_Type: Perk, Sustain
 	Tier: 2
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Frontiersman
 	Cost: 8
 	Unlock: Rank 39
-	Use_Type: Perk, Loot
 	Tier: 3
+	Use_Type: Perk, Loot
 @Perk
 	Name: Beastface
 	Cost: 3
 	Unlock: Rank 41
-	Use_Type: Perk, Stealth
 	Tier: 3
+	Use_Type: Perk, Stealth
 @Perk
 	Name: Decoy Supply
 	Cost: 1
 	Unlock: Rank 43
-	Use_Type: Perk, Sustain
 	Tier: 1
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Ambidextrous
 	Cost: 3
 	Unlock: Rank 44
-	Use_Type: Perk, Aim
 	Tier: 1
+	Use_Type: Perk, Aim
 @Perk
 	Name: Tomahawk
 	Cost: 1
 	Unlock: Rank 45
-	Use_Type: Perk, Aim
 	Tier: 1
+	Use_Type: Perk, Aim
 @Perk
 	Name: Iron Sharpshooter
 	Cost: 3
 	Unlock: Rank 47
-	Use_Type: Perk, Aim
 	Tier: 2
+	Use_Type: Perk, Aim
 @Perk
 	Name: Bolt Seer
 	Cost: 2
 	Unlock: Rank 49
-	Use_Type: Perk, Aim
 	Tier: 1
+	Use_Type: Perk, Aim
 @Perk
 	Name: Quartermaster
 	Cost: 6
 	Unlock: Rank 51
-	Use_Type: Perk, Loot
 	Tier: 3
+	Use_Type: Perk, Loot
 @Perk
 	Name: Mithridatist
 	Cost: 3
 	Unlock: Rank 53
-	Use_Type: Perk, Sustain
 	Tier: 2
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Pitcher
 	Cost: 6
 	Unlock: Rank 55
-	Use_Type: Perk, Loot
 	Tier: 3
+	Use_Type: Perk, Loot
 @Perk
 	Name: Bulletgrubber
 	Cost: 6
 	Unlock: Rank 57
-	Use_Type: Perk, Reload
 	Tier: 3
+	Use_Type: Perk, Reload
 @Perk
 	Name: Poacher
 	Cost: 2
 	Unlock: Rank 59
-	Use_Type: Perk, Stealth
 	Tier: 1
+	Use_Type: Perk, Stealth
 @Perk
 	Name: Dauntless
 	Cost: 1
 	Unlock: Rank 61
-	Use_Type: Perk, Sustain
 	Tier: 3
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Kiteskin
 	Cost: 1
 	Unlock: Rank 63
-	Use_Type: Perk, Sustain
 	Tier: 2
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Iron Devastator
 	Cost: 2
 	Unlock: Rank 65
-	Use_Type: Perk, Aim
 	Tier: 1
+	Use_Type: Perk, Aim
 @Perk
 	Name: Necromancer
 	Cost: 4
 	Unlock: Rank 69
-	Use_Type: Perk, Support
 	Tier: 3
+	Use_Type: Perk, Support
 @Perk
 	Name: Vulture
 	Cost: 3
 	Unlock: Rank 71
-	Use_Type: Perk, Support
 	Tier: 2
+	Use_Type: Perk, Support
 @Perk
 	Name: Doctor
 	Cost: 8
 	Unlock: Rank 73
-	Use_Type: Perk, Sustain
 	Tier: 3
+	Use_Type: Perk, Sustain
 @Perk
 	Name: Sniper Scopesmith
 	Cost: 3
 	Unlock: Rank 77
-	Use_Type: Perk, Aim
 	Tier: 1
+	Use_Type: Perk, Aim
 @Perk
 	Name: Vigilant
 	Cost: 2
 	Unlock: Rank 87
-	Use_Type: Perk, Stealth
 	Tier: 1
+	Use_Type: Perk, Stealth
 @Consumable
 	Name: Ammo Box
 	Cost: 65
 	Unlock: Rank 80
-	Use_Type: Consumable, Ammo
 	Tier: 3
+	Use_Type: Consumable, Ammo
 @Consumable
 	Name: Antidote Shot
 	Cost: 55
-	Use_Type: Consumable, Support
 	Tier:
+	Use_Type: Consumable, Support
 @Consumable
 	Name: Big Dynamite Bundle
 	Cost: 110
-	Use_Type: Consumable, Offense, Explosive
 	Tier: 3
+	Use_Type: Consumable, Offense, Explosive
 @Consumable
 	Name: Chaos Bomb
 	Cost: 15
-	Use_Type: Consumable, Deception, Explosive
 	Tier: 1
+	Use_Type: Consumable, Deception, Explosive
 @Consumable
 	Name: Concertina Bomb
 	Cost: 48
-	Use_Type: Consumable, Offense
 	Tier: 2
+	Use_Type: Consumable, Offense
 @Consumable
 	Name: Dynamite Bundle
 	Cost: 75
-	Use_Type: Consumable, Offense, Explosive
 	Tier: 2
+	Use_Type: Consumable, Offense, Explosive
 @Consumable
 	Name: Dynamite Stick
 	Cost: 18
 	Unlock: Rank 8
-	Use_Type: Consumable, Offense, Explosive
 	Tier: 1
+	Use_Type: Consumable, Offense, Explosive
 @Consumable
 	Name: Fire Bomb
 	Cost: 18
 	Unlock: Rank 1
-	Use_Type: Consumable, Offense, Fire
 	Tier: 1
+	Use_Type: Consumable, Offense, Fire
 @Consumable
 	Name: Flash Bomb
 	Cost: 47
-	Use_Type: Consumable, Offense
 	Tier: 3
+	Use_Type: Consumable, Offense
 @Consumable
 	Name: Frag Bomb
 	Cost: 70
-	Use_Type: Consumable, Offense, Explosive
 	Tier: 3
+	Use_Type: Consumable, Offense, Explosive
 @Consumable
 	Name: Hellfire Bomb
 	Cost: 70
-	Use_Type: Consumable, Offense, Fire
 	Tier: 3
+	Use_Type: Consumable, Offense, Fire
 @Consumable
 	Name: Hive Bomb
 	Cost: 40
-	Use_Type: Consumable, Offense
 	Tier: 1
+	Use_Type: Consumable, Offense
 @Consumable
 	Name: Liquid Fire Bomb
 	Cost: 23
-	Use_Type: Consumable, Offense, Fire
 	Tier: 1
+	Use_Type: Consumable, Offense, Fire
 @Consumable
 	Name: Poison Bomb
 	Cost: 25
 	Unlock: Rank 48
-	Use_Type: Consumable, Offense
 	Tier: 1
+	Use_Type: Consumable, Offense
 @Consumable
 	Name: Stamina Shot
 	Cost: 40
-	Use_Type: Consumable, Support
 	Tier: 3
+	Use_Type: Consumable, Support
 @Consumable
 	Name: Sticky Bomb
 	Cost: 64
-	Use_Type: Consumable, Offense, Explosive
 	Tier: 3
+	Use_Type: Consumable, Offense, Explosive
 @Consumable
 	Name: Vitality Shot
 	Cost: 65
-	Use_Type: Consumable, Support
 	Tier: 3
+	Use_Type: Consumable, Support
 @Consumable
 	Name: Waxed Dynamite Stick
 	Cost: 24
-	Use_Type: Consumable, Offense, Explosive
 	Tier: 1
+	Use_Type: Consumable, Offense, Explosive
 @Consumable
 	Name: Weak Antidote Shot
 	Cost: 25
-	Use_Type: Consumable, Support
 	Tier: 2
+	Use_Type: Consumable, Support
 @Consumable
 	Name: Weak Stamina Shot
 	Cost: 10
-	Use_Type: Consumable, Support
 	Tier: 1
+	Use_Type: Consumable, Support
 @Consumable
 	Name: Weak Vitality Shot
 	Cost: 10
 	Unlock: Rank 1
-	Use_Type: Consumable, Support
 	Tier: 2
+	Use_Type: Consumable, Support
