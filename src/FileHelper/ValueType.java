@@ -8,6 +8,8 @@ public enum ValueType {
   Name(RuleType.String, new InformationData("Name", "")),
   Cost(RuleType.Integer, new InformationData("Cost", "")),
   Slot_Size(RuleType.Integer, new InformationData("Slot_Size", "")),
+  Capacity(RuleType.Integer, new InformationData("Capacity", "")),
+  Reserve(RuleType.Integer, new InformationData("Reserve", "")),
   Unlock(RuleType.Integer, new InformationData("Unlock", "")),
   Damage(RuleType.Integer, new InformationData("Damage", "")),
   Weapon_Family(RuleType.String, new InformationData("Category", ""), new InformationData("Weapon_Family", "")),

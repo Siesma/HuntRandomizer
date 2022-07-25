@@ -10,6 +10,7 @@ import utils.AttributeObject;
 import utils.Hunter;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Runnable {
@@ -20,7 +21,10 @@ public class Runnable {
 
   private Hunter currentHunter;
 
+  private String parameter;
+
   public Runnable() {
+    this.parameter = "";
   }
 
   public void start(String parameter) {
@@ -51,6 +55,7 @@ public class Runnable {
   private void init(String fileName) {
     System.out.print("\n\n\n");
     System.out.println("Reinitializing object list (weapons, perks, tools, consumables)");
+    this.parameter = fileName;
     this.unfiltered_attributeObjects = (new ImportHelper()).get(this, fileName);
     for (Commands c : Commands.values()) {
       c.getCommand().updateInformationData();
@@ -60,7 +65,7 @@ public class Runnable {
 
 
   public ArrayList<AttributeObject> getUnfiltered_attributeObjects() {
-    return this.unfiltered_attributeObjects = (new ImportHelper()).get(this, "DataFile");
+    return this.unfiltered_attributeObjects = (new ImportHelper()).get(this, Objects.equals(this.parameter, "") ? "DataFile" : this.parameter);
   }
 
   public ArrayList<AttributeObject> getFiltered_attributeObjects() {
