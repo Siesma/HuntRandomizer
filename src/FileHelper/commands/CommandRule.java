@@ -130,7 +130,7 @@ public class CommandRule extends AbstractCommand {
         StringBuilder out = new StringBuilder();
         out.append("---\n");
         out.append("\tUsage: \n");
-        out.append("\t\"rule -clear resets the rules.\" \n");
+        out.append("\t\"rule -clear\" resets the rules. \n");
         out.append("\t\"rule {attribute, operation, operand}\" \n");
         out.append("\t\"attribute\" refers to the attribute that is checked against. \n");
         out.append("\t\"operation\" refers to the logic operations (>, <, >=, <=, =, !) or the implicit operator \"~\" which means \"Contains\". \n");

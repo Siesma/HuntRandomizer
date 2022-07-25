@@ -48,14 +48,20 @@ public class CommandWon extends AbstractCommand {
         }
 
         for (AttributeObject attributeObject : run.getFiltered_attributeObjects()) {
-            if (attributeObject.getClass().toString().endsWith("Perk")) {
+            if(attributeObject.hasGivenAttribute(ValueType.Use_Type).getAttribute().getData().contains("Perk")) {
                 perkList.add((Perk) attributeObject);
             }
+//            if (attributeObject.getClass().toString().endsWith("Perk")) {
+//                perkList.add((Perk) attributeObject);
+//            }
         }
         for (AttributeObject attributeObject : run.getUnfiltered_attributeObjects()) {
-            if (attributeObject.getClass().toString().endsWith("Perk")) {
+            if(attributeObject.hasGivenAttribute(ValueType.Use_Type).getAttribute().getData().contains("Perk")) {
                 unfilteredPerkList.add((Perk) attributeObject);
             }
+//            if (attributeObject.getClass().toString().endsWith("Perk")) {
+//                unfilteredPerkList.add((Perk) attributeObject);
+//            }
         }
 
         Scanner sc = new Scanner(System.in);

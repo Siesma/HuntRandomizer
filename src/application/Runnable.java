@@ -65,7 +65,7 @@ public class Runnable {
 
 
   public ArrayList<AttributeObject> getUnfiltered_attributeObjects() {
-    return this.unfiltered_attributeObjects = (new ImportHelper()).get(this, Objects.equals(this.parameter, "") ? "DataFile" : this.parameter);
+    return this.unfiltered_attributeObjects = (new ImportHelper()).get(this,"DataFile");
   }
 
   public ArrayList<AttributeObject> getFiltered_attributeObjects() {

@@ -25,6 +25,7 @@ public class CommandGenerate extends AbstractCommand {
     public void setInformationLists(ArrayList list) {
         super.setInformationLists(list);
     }
+
     public CommandGenerate(String... args) {
         super(args);
     }
@@ -164,7 +165,7 @@ public class CommandGenerate extends AbstractCommand {
         }
 
         weapons = new Weapon[]{
-          primary, secondary
+            primary, secondary
         };
 
         /*
@@ -207,7 +208,7 @@ public class CommandGenerate extends AbstractCommand {
         for (AttributeObject tool : run.getUnfiltered_attributeObjects()) {
             AttributeIdentifier meleeAble = tool.hasGivenAttribute(ValueType.Meleeable);
             if (meleeAble.doesExist()) {
-                if (meleeAble.getAttribute().getData().equalsIgnoreCase("True") && tool.getClass().toString().endsWith("Tool")) {
+                if (meleeAble.getAttribute().getData().replaceAll("\\s+", "").equalsIgnoreCase("True") && tool.hasGivenAttribute(ValueType.Use_Type).getAttribute().getData().contains("Tool")) {
                     tooMeleelList.add((Tool) tool);
                 }
             }
@@ -263,7 +264,7 @@ public class CommandGenerate extends AbstractCommand {
 
         }
 
-        if(!tools[3].hasGivenAttribute(ValueType.Name).getAttribute().getData().equalsIgnoreCase("First Aid Kit") && healthItems <= 3) {
+        if (!tools[3].hasGivenAttribute(ValueType.Name).getAttribute().getData().equalsIgnoreCase("First Aid Kit") && healthItems <= 3) {
             tools[3] = med_kit;
         }
 
