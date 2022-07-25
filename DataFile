@@ -1361,6 +1361,42 @@
 	Custom_Ammo: None
 	Tier: 3
 	Use_Type: Weapon
+@Weapon
+	Name: Winfield 1893 Slate
+	Cost: 300$
+	Slot_Size: 3
+	Unlock: 48
+	Damage: 180
+	Weapon_Family: Winfield 1893 Slate
+	Effective_Range: 12m
+	ROF: 58rpm
+	Handling: 75%
+	Reload_Speed: 9s
+	Muzzle_Velocity: 425m/s
+	Meleeable: false
+	Light_Melee: 27
+	Heavy_Melee: 54
+	Custom_Ammo: Slug, Penny Shot
+	Tier: 3
+	Use_Type: Weapon
+@Weapon
+    Name: Berthier Mle 1892
+    Cost: 356$
+    Slot_Size: 3
+    Unlock: 78
+    Damage: 130
+    Weapon_Family: Berthier Mle 1892
+    Effective_Range: 305m
+    ROF: 36rpm
+    Handling: 79%
+    Reload_Speed: 3s
+    Muzzle_Velocity: 590m/s
+    Meleeable: false
+    Light_Melee: 27
+    Heavy_Melee: 54
+    Custom_Ammo: Incendiary, Spitzer
+    Tier: 3
+    Use_Type: Weapon
 @Tool
 	Name: Alert trip Mine
 	Cost: 60
@@ -1752,7 +1788,7 @@
 	Name: Ammo Box
 	Cost: 65
 	Unlock: Rank 80
-	Use_Type: Perk, Ammo
+	Use_Type: Consumable, Ammo
 	Tier: 3
 @Consumable
 	Name: Antidote Shot
