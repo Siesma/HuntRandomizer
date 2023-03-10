@@ -1723,3 +1723,595 @@ Weapon {
 	Tier: 3
 	Use_Type: Weapon
 }
+Tool {
+	Name: Alert trip Mine
+	Cost: 60
+	Meleeable: false
+	Tier: 2
+	Use_Type: Tool, Trap
+}
+Tool {
+	Name: Blank Fire Decoys
+	Cost: 45
+	Meleeable: false
+	Tier: 1
+	Use_Type: Tool, Deception
+}
+Tool {
+	Name: Choke Bomb
+	Cost: 25
+	Meleeable: false
+	Tier: 3
+	Use_Type: Tool, Support
+}
+Tool {
+	Name: Concertina Trip Mine
+	Cost: 90
+	Meleeable: false
+	Tier: 2
+	Use_Type: Tool, Trap
+}
+Tool {
+	Name: Decoy Fuses
+	Cost: 60
+	Meleeable: false
+	Tier: 1
+	Use_Type: Tool, Deception
+}
+Tool {
+	Name: Decoys
+	Cost: 6
+	Meleeable: false
+	Tier: 1
+	Use_Type: Tool, Deception
+}
+Tool {
+	Name: Dusters
+	Cost: 15
+	Meleeable: true
+	Tier: 3
+	Use_Type: Tool
+}
+Tool {
+	Name: Electric Lamp
+	Cost: 5
+	Meleeable: false
+	Tier: 1
+	Use_Type: Tool
+}
+Tool {
+	Name: First Aid Kit
+	Cost: 30
+	Meleeable: false
+	Tier: 3
+	Use_Type: Tool, Support
+}
+Tool {
+	Name: Flare Pistol
+	Cost: 36
+	Meleeable: false
+	Tier: 3
+	Use_Type: Tool
+}
+Tool {
+	Name: Fusees
+	Cost: 10
+	Meleeable: false
+	Tier: 1
+	Use_Type: Tool
+}
+Tool {
+	Name: Throwing Axes
+	Cost: 30
+	Meleeable: true
+	Tier: 3
+	Use_Type: Tool
+}
+Tool {
+	Name: Heavy Knife
+	Cost: 25
+	Meleeable: true
+	Tier: 2
+	Use_Type: Tool, Support
+}
+Tool {
+	Name: Knife
+	Cost: 20
+	Meleeable: true
+	Tier: 2
+	Use_Type: Tool
+}
+Tool {
+	Name: Knuckle Knife
+	Cost: 15
+	Meleeable: true
+	Tier: 3
+	Use_Type: Tool
+}
+Tool {
+	Name: Poison Trip Mine
+	Cost: 60
+	Meleeable: false
+	Tier: 2
+	Use_Type: Tool, Trap
+}
+Tool {
+	Name: Quad Derringer
+	Cost: 30
+	Meleeable: false
+	Tier: 2
+	Use_Type: Tool
+}
+Tool {
+	Name: Spyglass
+	Cost: 8
+	Meleeable: false
+	Tier: 1
+	Use_Type: Tool
+}
+Tool {
+	Name: Throwing Knives
+	Cost: 40
+	Meleeable: true
+	Tier: 3
+	Use_Type: Tool
+}
+Perk {
+	Name: Adrenaline
+	Cost: 1
+	Unlock: Rank 1
+	Tier: 1
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Conduit
+	Cost: 4
+	Unlock: Rank 1
+	Tier: 1
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Greyhound
+	Cost: 4
+	Unlock: Rank 1
+	Tier: 2
+	Use_Type: Perk, Movement
+}
+Perk {
+	Name: Packmule
+	Cost: 3
+	Unlock: Rank 1
+	Tier: 3
+	Use_Type: Perk, Loot
+}
+Perk {
+	Name: Hornskin
+	Cost: 3
+	Unlock: Rank 2
+	Tier: 2
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Determination
+	Cost: 3
+	Unlock: Rank 5
+	Tier: 2
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Iron Repeater
+	Cost: 2
+	Unlock: Rank 7
+	Tier: 2
+	Use_Type: Perk, Aim
+}
+Perk {
+	Name: Resilience
+	Cost: 2
+	Unlock: Rank 9
+	Tier: 3
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Bolt Thrower
+	Cost: 4
+	Unlock: Rank 13
+	Tier: 3
+	Use_Type: Perk, Reload
+}
+Perk {
+	Name: Levering
+	Cost: 3
+	Unlock: Rank 14
+	Tier: 2
+	Use_Type: Perk, Aim
+}
+Perk {
+	Name: Salveskin
+	Cost: 5
+	Unlock: Rank 15
+	Tier: 3
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Bulwark
+	Cost: 2
+	Unlock: Rank 16
+	Tier: 2
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Fanning
+	Cost: 7
+	Unlock: Rank 17
+	Tier: 2
+	Use_Type: Perk, Aim
+}
+Perk {
+	Name: Ghoul
+	Cost: 4
+	Unlock: Rank 19
+	Tier: 1
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Gator Legs
+	Cost: 2
+	Unlock: Rank 21
+	Tier: 2
+	Use_Type: Perk, Movement
+}
+Perk {
+	Name: Deadeye Scopesmith
+	Cost: 1
+	Unlock: Rank 23
+	Tier: 1
+	Use_Type: Perk, Aim
+}
+Perk {
+	Name: Silent Killer
+	Cost: 5
+	Unlock: Rank 25
+	Tier: 2
+	Use_Type: Perk, Stealth
+}
+Perk {
+	Name: Lightfoot
+	Cost: 5
+	Unlock: Rank 27
+	Tier: 3
+	Use_Type: Perk, Stealth
+}
+Perk {
+	Name: Serpent
+	Cost: 4
+	Unlock: Rank 28
+	Tier: 2
+	Use_Type: Perk, Support
+}
+Perk {
+	Name: Physician
+	Cost: 5
+	Unlock: Rank 29
+	Tier: 3
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Steady Aim
+	Cost: 3
+	Unlock: Rank 31
+	Tier: 2
+	Use_Type: Perk, Aim
+}
+Perk {
+	Name: Whispersmith
+	Cost: 2
+	Unlock: Rank 32
+	Tier: 1
+	Use_Type: Perk, Stealth
+}
+Perk {
+	Name: Steady Hand
+	Cost: 2
+	Unlock: Rank 33
+	Tier: 1
+	Use_Type: Perk, Aim
+}
+Perk {
+	Name: Marksman Scopesmith
+	Cost: 2
+	Unlock: Rank 35
+	Tier: 1
+	Use_Type: Perk, Aim
+}
+Perk {
+	Name: Bloodless
+	Cost: 4
+	Unlock: Rank 37
+	Tier: 2
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Frontiersman
+	Cost: 8
+	Unlock: Rank 39
+	Tier: 3
+	Use_Type: Perk, Loot
+}
+Perk {
+	Name: Beastface
+	Cost: 3
+	Unlock: Rank 41
+	Tier: 3
+	Use_Type: Perk, Stealth
+}
+Perk {
+	Name: Decoy Supply
+	Cost: 1
+	Unlock: Rank 43
+	Tier: 1
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Ambidextrous
+	Cost: 3
+	Unlock: Rank 44
+	Tier: 1
+	Use_Type: Perk, Aim
+}
+Perk {
+	Name: Tomahawk
+	Cost: 1
+	Unlock: Rank 45
+	Tier: 1
+	Use_Type: Perk, Aim
+}
+Perk {
+	Name: Iron Sharpshooter
+	Cost: 3
+	Unlock: Rank 47
+	Tier: 2
+	Use_Type: Perk, Aim
+}
+Perk {
+	Name: Bolt Seer
+	Cost: 2
+	Unlock: Rank 49
+	Tier: 1
+	Use_Type: Perk, Aim
+}
+Perk {
+	Name: Quartermaster
+	Cost: 6
+	Unlock: Rank 51
+	Tier: 3
+	Use_Type: Perk, Loot
+}
+Perk {
+	Name: Mithridatist
+	Cost: 3
+	Unlock: Rank 53
+	Tier: 2
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Pitcher
+	Cost: 6
+	Unlock: Rank 55
+	Tier: 3
+	Use_Type: Perk, Loot
+}
+Perk {
+	Name: Bulletgrubber
+	Cost: 6
+	Unlock: Rank 57
+	Tier: 3
+	Use_Type: Perk, Reload
+}
+Perk {
+	Name: Poacher
+	Cost: 2
+	Unlock: Rank 59
+	Tier: 1
+	Use_Type: Perk, Stealth
+}
+Perk {
+	Name: Dauntless
+	Cost: 1
+	Unlock: Rank 61
+	Tier: 3
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Kiteskin
+	Cost: 1
+	Unlock: Rank 63
+	Tier: 2
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Iron Devastator
+	Cost: 2
+	Unlock: Rank 65
+	Tier: 1
+	Use_Type: Perk, Aim
+}
+Perk {
+	Name: Necromancer
+	Cost: 4
+	Unlock: Rank 69
+	Tier: 3
+	Use_Type: Perk, Support
+}
+Perk {
+	Name: Vulture
+	Cost: 3
+	Unlock: Rank 71
+	Tier: 2
+	Use_Type: Perk, Support
+}
+Perk {
+	Name: Doctor
+	Cost: 8
+	Unlock: Rank 73
+	Tier: 3
+	Use_Type: Perk, Sustain
+}
+Perk {
+	Name: Sniper Scopesmith
+	Cost: 3
+	Unlock: Rank 77
+	Tier: 1
+	Use_Type: Perk, Aim
+}
+Perk {
+	Name: Vigilant
+	Cost: 2
+	Unlock: Rank 87
+	Tier: 1
+	Use_Type: Perk, Stealth
+}
+Consumable {
+	Name: Stalker Beetle
+	Cost: 45
+	Tier: 2
+	Use_Type: Observing
+}
+Consumable {
+	Name: Ammo Box
+	Cost: 65
+	Tier: 3
+	Use_Type: Perk, Ammo
+}
+Consumable {
+	Name: Antidote Shot
+	Cost: 55
+	Tier: 
+	Use_Type: Consumable, Support
+}
+Consumable {
+	Name: Big Dynamite Bundle
+	Cost: 110
+	Tier: 3
+	Use_Type: Consumable, Offense, Explosive
+}
+Consumable {
+	Name: Chaos Bomb
+	Cost: 15
+	Tier: 1
+	Use_Type: Consumable, Deception, Explosive
+}
+Consumable {
+	Name: Concertina Bomb
+	Cost: 48
+	Tier: 2
+	Use_Type: Consumable, Offense
+}
+Consumable {
+	Name: Dynamite Bundle
+	Cost: 75
+	Tier: 2
+	Use_Type: Consumable, Offense, Explosive
+}
+Consumable {
+	Name: Dynamite Stick
+	Cost: 18
+	Tier: 1
+	Use_Type: Consumable, Offense, Explosive
+}
+Consumable {
+	Name: Fire Bomb
+	Cost: 18
+	Tier: 1
+	Use_Type: Consumable, Offense, Fire
+}
+Consumable {
+	Name: Flash Bomb
+	Cost: 47
+	Tier: 3
+	Use_Type: Consumable, Offense
+}
+Consumable {
+	Name: Frag Bomb
+	Cost: 70
+	Tier: 3
+	Use_Type: Consumable, Offense, Explosive
+}
+Consumable {
+	Name: Hellfire Bomb
+	Cost: 70
+	Tier: 3
+	Use_Type: Consumable, Offense, Fire
+}
+Consumable {
+	Name: Hive Bomb
+	Cost: 40
+	Tier: 1
+	Use_Type: Consumable, Offense
+}
+Consumable {
+	Name: Liquid Fire Bomb
+	Cost: 23
+	Tier: 1
+	Use_Type: Consumable, Offense, Fire
+}
+Consumable {
+	Name: Poison Bomb
+	Cost: 25
+	Tier: 1
+	Use_Type: Consumable, Offense
+}
+Consumable {
+	Name: Stamina Shot
+	Cost: 40
+	Tier: 3
+	Use_Type: Consumable, Support
+}
+Consumable {
+	Name: Sticky Bomb
+	Cost: 64
+	Tier: 3
+	Use_Type: Consumable, Offense, Explosive
+}
+Consumable {
+	Name: Vitality Shot
+	Cost: 65
+	Tier: 3
+	Use_Type: Consumable, Support
+}
+Consumable {
+	Name: Waxed Dynamite Stick
+	Cost: 24
+	Tier: 1
+	Use_Type: Consumable, Offense, Explosive
+}
+Consumable {
+	Name: Weak Antidote Shot
+	Cost: 25
+	Tier: 2
+	Use_Type: Consumable, Support
+}
+Consumable {
+	Name: Weak Stamina Shot
+	Cost: 10
+	Tier: 1
+	Use_Type: Consumable, Support
+}
+Consumable {
+	Name: Weak Vitality Shot
+	Cost: 10
+	Tier: 2
+	Use_Type: Consumable, Support
+}
+Consumable {
+	Name: Weak Regeneration Shot
+	Cost: 20
+	Tier: 2
+	Use_Type: Consumable, Support
+}
+Consumable {
+	Name: Regeneration Shot
+	Cost: 85
+	Tier: 3
+	Use_Type: Consumable, Support
+}
