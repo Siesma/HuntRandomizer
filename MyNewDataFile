@@ -13,7 +13,7 @@ Weapon {
 	Meleeable: true
 	Light_Melee: 180
 	Heavy_Melee: 360
-	Custom_Ammo: None
+	Custom_Ammo: Dragonbreath, SteelBall
 	Tier: 3
 	Use_Type: Weapon
 }
@@ -84,6 +84,25 @@ Weapon {
 	Effective_Range: 250m
 	ROF: 34rpm
 	Handling: 83%
+	Reload_Speed: 18s
+	Muzzle_Velocity: 630m/s
+	Meleeable: false
+	Light_Melee: 27
+	Heavy_Melee: 54
+	Custom_Ammo: Incendiary, Spitzer
+	Tier: 2
+	Use_Type: Weapon
+}
+Weapon {
+	Name: Lebel 1886 Aperture
+	Cost: 425$
+	Slot_Size: 3
+	Unlock: 
+	Damage: 132
+	Weapon_Family: Lebel 1886
+	Effective_Range: 310m
+	ROF: 34rpm
+	Handling: 80%
 	Reload_Speed: 18s
 	Muzzle_Velocity: 630m/s
 	Meleeable: false
@@ -166,6 +185,25 @@ Weapon {
 	Light_Melee: 27
 	Heavy_Melee: 54
 	Custom_Ammo: Incendiary, FMJ, Explsoive
+	Tier: 2
+	Use_Type: Weapon
+}
+Weapon {
+	Name: Martini-Henry IC1 IronSide
+	Cost: 184$
+	Slot_Size: 3
+	Unlock: 
+	Damage: 143
+	Weapon_Family: martini-Henry IC1 IronSide
+	Effective_Range: 334m
+	ROF: 33rpm
+	Handling: 68%
+	Reload_Speed: 11s
+	Muzzle_Velocity: 400m/s
+	Meleeable: false
+	Light_Melee: 27
+	Heavy_Melee: 54
+	Custom_Ammo: FMJ, Incendiary, Explosive
 	Tier: 2
 	Use_Type: Weapon
 }
@@ -341,6 +379,25 @@ Weapon {
 	Use_Type: Weapon
 }
 Weapon {
+	Name: Caldwell 92 New Army
+	Cost: 90$
+	Slot_Size: 1
+	Unlock: Rank 12
+	Damage: 97
+	Weapon_Family: Caldwell 92 New Army
+	Effective_Range: 79m
+	ROF: 107rpm
+	Handling: 59%
+	Reload_Speed: 10s
+	Muzzle_Velocity: 230m/s
+	Meleeable: false
+	Light_Melee: 13
+	Heavy_Melee: 31
+	Custom_Ammo: Dum Dum, FMJ
+	Tier: 2
+	Use_Type: Weapon
+}
+Weapon {
 	Name: Romero 77
 	Cost: 34$
 	Slot_Size: 3
@@ -355,7 +412,7 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 27
 	Heavy_Melee: 54
-	Custom_Ammo: Slug, Dragonbreath, Penny Shot
+	Custom_Ammo: Slug, Dragonbreath, Penny Shot, Starshell
 	Tier: 3
 	Use_Type: Weapon
 }
@@ -374,8 +431,122 @@ Weapon {
 	Meleeable: true
 	Light_Melee: 27
 	Heavy_Melee: 150
-	Custom_Ammo: Slug, Dragonbreath, Penny Shot
+	Custom_Ammo: Slug, Dragonbreath, Penny Shot, Starshell
 	Tier: 3
+	Use_Type: Weapon
+}
+Weapon {
+	Name: Romero 77 Alamo
+	Cost: 98$
+	Slot_Size: 3
+	Unlock: 
+	Damage: 200
+	Weapon_Family: Romero 77
+	Effective_Range: 15m
+	ROF: 22rpm
+	Handling: 92%
+	Reload_Speed: 13s
+	Muzzle_Velocity: 450m/s
+	Meleeable: false
+	Light_Melee: 27
+	Heavy_Melee: 54
+	Custom_Ammo: Slug, Dragonbreath, Penny Shot, Starshell
+	Tier: 3
+	Use_Type: Weapon
+}
+Weapon {
+	Name: Scottfield Model 3
+	Cost: 77$
+	Slot_Size: 1
+	Unlock: Rank 1
+	Damage: 107
+	Weapon_Family: Scottfield Model 3
+	Effective_Range: 85m
+	ROF: 41rpm
+	Handling: 68%
+	Reload_Speed: 9s
+	Muzzle_Velocity: 280m/s
+	Meleeable: false
+	Light_Melee: 13
+	Heavy_Melee: 31
+	Custom_Ammo: Full Metal Jacket, Incendiary
+	Tier: 2
+	Use_Type: Weapon
+}
+Weapon {
+	Name: Scottfield Model 3 Brawler
+	Cost: 92$
+	Slot_Size: 1
+	Unlock: 
+	Damage: 107
+	Weapon_Family: Scottfield Model 3
+	Effective_Range: 85m
+	ROF: 41rpm
+	Handling: 62%
+	Reload_Speed: 9s
+	Muzzle_Velocity: 280m/s
+	Meleeable: true
+	Light_Melee: 13
+	Heavy_Melee: 72
+	Custom_Ammo: Full Metal Jacket, Incendiary
+	Tier: 2
+	Use_Type: Weapon
+}
+Weapon {
+	Name: Scottfield Model 3 Precision
+	Cost: 85$
+	Slot_Size: 2
+	Unlock: 
+	Damage: 107
+	Weapon_Family: Scottfield Model 3
+	Effective_Range: 85m
+	ROF: 52rpm
+	Handling: 80%
+	Reload_Speed: 9s
+	Muzzle_Velocity: 280m/s
+	Meleeable: false
+	Light_Melee: 27
+	Heavy_Melee: 54
+	Custom_Ammo: Full Metal Jacket, Incendiary
+	Tier: 2
+	Use_Type: Weapon
+}
+Weapon {
+	Name: Scottfield Model 3 Spitfire
+	Cost: 108$
+	Slot_Size: 1
+	Unlock: 
+	Damage: 107
+	Weapon_Family: Scottfield Model 3
+	Effective_Range: 85m
+	ROF: 77rpm
+	Handling: 62%
+	Reload_Speed: 9s
+	Muzzle_Velocity: 280m/s
+	Meleeable: false
+	Light_Melee: 13
+	Heavy_Melee: 31
+	Custom_Ammo: Full Metal Jacket, Incendiary
+	Tier: 3
+	Use_Type: Weapon
+}
+Weapon {
+	Name: Scottfield Model 3 Swift
+	Cost: 95$
+	Slot_Size: 1
+	Unlock: 
+	Damage: 107
+	Weapon_Family: Scottfield Model 3
+	Effective_Range: 85m
+	ROF: 41rpm
+	Handling: 68%
+	Reload_Speed: 4s
+	Muzzle_Velocity: 280m/s
+	Meleeable: false
+	Light_Melee: 13
+	Heavy_Melee: 31
+	Custom_Ammo: Full Metal Jacket, Incendiary
+	Tier: 2
 	Use_Type: Weapon
 }
 Weapon {
@@ -393,7 +564,7 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 27
 	Heavy_Melee: 54
-	Custom_Ammo: Poison, FMJ
+	Custom_Ammo: Poison, FMJ, Incendiary
 	Tier: 3
 	Use_Type: Weapon
 }
@@ -412,7 +583,7 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 27
 	Heavy_Melee: 54
-	Custom_Ammo: Poison, FMJ
+	Custom_Ammo: Poison, FMJ, Incendiary
 	Tier: 2
 	Use_Type: Weapon
 }
@@ -431,8 +602,46 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 27
 	Heavy_Melee: 54
-	Custom_Ammo: Poison, FMJ
+	Custom_Ammo: Poison, FMJ, Incendiary
 	Tier: 2
+	Use_Type: Weapon
+}
+Weapon {
+	Name: Sparks Pistol
+	Cost: 130$
+	Slot_Size: 1
+	Unlock: 
+	Damage: 149
+	Weapon_Family: Sparks LRR
+	Effective_Range: 150m
+	ROF: 10rpm
+	Handling: 60%
+	Reload_Speed: 4s
+	Muzzle_Velocity: 453m/s
+	Meleeable: false
+	Light_Melee: 13
+	Heavy_Melee: 31
+	Custom_Ammo: Poison, FMJ, Incendiary
+	Tier: 3
+	Use_Type: Weapon
+}
+Weapon {
+	Name: Springfield M1892 Krag
+	Cost: 376$
+	Slot_Size: 3
+	Unlock: 
+	Damage: 124
+	Weapon_Family: Springfield M1892 Krag
+	Effective_Range: 290m
+	ROF: 43rpm
+	Handling: 81%
+	Reload_Speed: 11s
+	Muzzle_Velocity: 610m/s
+	Meleeable: false
+	Light_Melee: 27
+	Heavy_Melee: 54
+	Custom_Ammo: Full Metal Jacket, Incendiary
+	Tier: 3
 	Use_Type: Weapon
 }
 Weapon {
@@ -450,7 +659,7 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 27
 	Heavy_Melee: 54
-	Custom_Ammo: Slug, Dragonbreath, Penny Shot
+	Custom_Ammo: Slug, Dragonbreath, Penny Shot, Flechette
 	Tier: 3
 	Use_Type: Weapon
 }
@@ -469,7 +678,7 @@ Weapon {
 	Meleeable: true
 	Light_Melee: 27
 	Heavy_Melee: 168
-	Custom_Ammo: Slug, Dragonbreath, Penny Shot
+	Custom_Ammo: Slug, Dragonbreath, Penny Shot, Flechette
 	Tier: 3
 	Use_Type: Weapon
 }
@@ -488,7 +697,7 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 27
 	Heavy_Melee: 54
-	Custom_Ammo: Dum Dum, Explosive
+	Custom_Ammo: Dum Dum, Explosive, Poison
 	Tier: 2
 	Use_Type: Weapon
 }
@@ -507,7 +716,7 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 27
 	Heavy_Melee: 54
-	Custom_Ammo: Dum Dum, Explosive
+	Custom_Ammo: Dum Dum, Explosive, Poison
 	Tier: 1
 	Use_Type: Weapon
 }
@@ -526,7 +735,45 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 27
 	Heavy_Melee: 54
-	Custom_Ammo: Incendiary, FMJ
+	Custom_Ammo: Incendiary, FMJ, High Velocity
+	Tier: 2
+	Use_Type: Weapon
+}
+Weapon {
+	Name: Vetterli 71 Karabiner Silencer
+	Cost: 150$
+	Slot_Size: 3
+	Unlock: 
+	Damage: 130
+	Weapon_Family: Vetterli 71 Karabiner
+	Effective_Range: 150m
+	ROF: 42rpm
+	Handling: 82%
+	Reload_Speed: 12s
+	Muzzle_Velocity: 280m/s
+	Meleeable: false
+	Light_Melee: 27
+	Heavy_Melee: 54
+	Custom_Ammo: Incendiary, FMJ, High Velocity
+	Tier: 2
+	Use_Type: Weapon
+}
+Weapon {
+	Name: Vetterli 71 Karabiner Marksman
+	Cost: 190$
+	Slot_Size: 3
+	Unlock: 
+	Damage: 130
+	Weapon_Family: Vetterli 71 Karabiner
+	Effective_Range: 203m
+	ROF: 42rpm
+	Handling: 80%
+	Reload_Speed: 12s
+	Muzzle_Velocity: 410m/s
+	Meleeable: false
+	Light_Melee: 27
+	Heavy_Melee: 54
+	Custom_Ammo: Incendiary, FMJ, High Velocity
 	Tier: 2
 	Use_Type: Weapon
 }
@@ -545,7 +792,7 @@ Weapon {
 	Meleeable: true
 	Light_Melee: 27
 	Heavy_Melee: 168
-	Custom_Ammo: Incendiary, FMJ
+	Custom_Ammo: Incendiary, FMJ, High Velocity
 	Tier: 2
 	Use_Type: Weapon
 }
@@ -564,7 +811,7 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 27
 	Heavy_Melee: 54
-	Custom_Ammo: Incendiary, FMJ
+	Custom_Ammo: Incendiary, FMJ, High Velocity
 	Tier: 1
 	Use_Type: Weapon
 }
@@ -944,7 +1191,7 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 13
 	Heavy_Melee: 31
-	Custom_Ammo: Slug, Dragonbreath, Penny Shot
+	Custom_Ammo: Slug, Dragonbreath, Penny Shot, Starshell
 	Tier: 2
 	Use_Type: Weapon
 }
@@ -963,8 +1210,27 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 90
 	Heavy_Melee: 150
-	Custom_Ammo: Slug, Dragonbreath, Penny Shot
+	Custom_Ammo: Slug, Dragonbreath, Penny Shot, Starshell
 	Tier: 3
+	Use_Type: Weapon
+}
+Weapon {
+	Name: Hunting Bow
+	Cost: 57$
+	Slot_Size: 2
+	Unlock: Rank 54
+	Damage: 227
+	Weapon_Family: Hunting Bow
+	Effective_Range: 23m
+	ROF: 50rpm
+	Handling: 66%
+	Reload_Speed: 1s
+	Muzzle_Velocity: 150m/s
+	Meleeable: false
+	Light_Melee: 13
+	Heavy_Melee: 31
+	Custom_Ammo: Concertina, Frag, Poison
+	Tier: 2
 	Use_Type: Weapon
 }
 Weapon {
@@ -982,7 +1248,7 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 13
 	Heavy_Melee: 31
-	Custom_Ammo: Slug, Dragonbreath, Penny Shot
+	Custom_Ammo: Slug, Dragonbreath, Penny Shot, Flechette
 	Tier: 2
 	Use_Type: Weapon
 }
@@ -1001,7 +1267,7 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 13
 	Heavy_Melee: 31
-	Custom_Ammo: Dum Dum, Explosive
+	Custom_Ammo: Dum Dum, Explosive, Poison
 	Tier: 1
 	Use_Type: Weapon
 }
@@ -1020,7 +1286,7 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 13
 	Heavy_Melee: 31
-	Custom_Ammo: Dum Dum, Explosive
+	Custom_Ammo: Dum Dum, Explosive, Poison
 	Tier: 1
 	Use_Type: Weapon
 }
@@ -1229,7 +1495,7 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 13
 	Heavy_Melee: 31
-	Custom_Ammo: Incendiary, Dum Dum
+	Custom_Ammo: Incendiary, Dum Dum, Poison, FMJ
 	Tier: 2
 	Use_Type: Weapon
 }
@@ -1248,7 +1514,7 @@ Weapon {
 	Meleeable: true
 	Light_Melee: 37
 	Heavy_Melee: 75
-	Custom_Ammo: Incendiary, Dum Dum
+	Custom_Ammo: Incendiary, Dum Dum, Poison, FMJ
 	Tier: 2
 	Use_Type: Weapon
 }
@@ -1305,6 +1571,25 @@ Weapon {
 	Meleeable: false
 	Light_Melee: 13
 	Heavy_Melee: 31
+	Custom_Ammo: Incendiary, FMJ, Slug, Dragonbreath, Starshell
+	Tier: 2
+	Use_Type: Weapon
+}
+Weapon {
+	Name: LeMat Mark II Carbine
+	Cost: 130$
+	Slot_Size: 3
+	Unlock: 
+	Damage: 107
+	Weapon_Family: LeMat Mark II
+	Effective_Range: 140m
+	ROF: 49rpm
+	Handling: 83%
+	Reload_Speed: 19s
+	Muzzle_Velocity: 375m/s
+	Meleeable: false
+	Light_Melee: 27
+	Heavy_Melee: 54
 	Custom_Ammo: Incendiary, FMJ, Slug, Dragonbreath, Starshell
 	Tier: 2
 	Use_Type: Weapon
@@ -1435,44 +1720,6 @@ Weapon {
 	Weapon_Family: Bare Hands
 	Meleeable: true
 	Custom_Ammo: None
-	Tier: 3
-	Use_Type: Weapon
-}
-Weapon {
-	Name: Winfield 1893 Slate
-	Cost: 300$
-	Slot_Size: 3
-	Unlock: 48
-	Damage: 180
-	Weapon_Family: Winfield 1893 Slate
-	Effective_Range: 12m
-	ROF: 58rpm
-	Handling: 75%
-	Reload_Speed: 9s
-	Muzzle_Velocity: 425m/s
-	Meleeable: false
-	Light_Melee: 27
-	Heavy_Melee: 54
-	Custom_Ammo: Slug, Penny Shot
-	Tier: 3
-	Use_Type: Weapon
-}
-Weapon {
-	Name: Berthier Mle 1892
-	Cost: 356$
-	Slot_Size: 3
-	Unlock: 78
-	Damage: 130
-	Weapon_Family: Berthier Mle 1892
-	Effective_Range: 305m
-	ROF: 36rpm
-	Handling: 79%
-	Reload_Speed: 3s
-	Muzzle_Velocity: 590m/s
-	Meleeable: false
-	Light_Melee: 27
-	Heavy_Melee: 54
-	Custom_Ammo: Incendiary, Spitzer
 	Tier: 3
 	Use_Type: Weapon
 }
